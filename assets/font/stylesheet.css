@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Thin.woff2') format('woff2'),
+        url('NewKansas-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-ThinItalic.woff2') format('woff2'),
+        url('NewKansas-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-SemiBold.woff2') format('woff2'),
+        url('NewKansas-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-SemiBoldItalic.woff2') format('woff2'),
+        url('NewKansas-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Regular.woff2') format('woff2'),
+        url('NewKansas-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-RegularItalic.woff2') format('woff2'),
+        url('NewKansas-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Medium.woff2') format('woff2'),
+        url('NewKansas-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-MediumItalic.woff2') format('woff2'),
+        url('NewKansas-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Light.woff2') format('woff2'),
+        url('NewKansas-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-LightItalic.woff2') format('woff2'),
+        url('NewKansas-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Heavy.woff2') format('woff2'),
+        url('NewKansas-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Bold.woff2') format('woff2'),
+        url('NewKansas-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-BoldItalic.woff2') format('woff2'),
+        url('NewKansas-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-Black.woff2') format('woff2'),
+        url('NewKansas-Black.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url('NewKansas-BlackItalic.woff2') format('woff2'),
+        url('NewKansas-BlackItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+

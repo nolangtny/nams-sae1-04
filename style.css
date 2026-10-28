@@ -1,0 +1,171 @@
+html {
+    background-color: #F4F3EE;
+}
+
+*::selection {
+  background: #96bc9b;
+  color: #F4F3EE;
+}
+*::-moz-selection {
+  background: #96bc9b;
+  color: #F4F3EE;
+}
+*::-webkit-selection {
+  background: #96bc9b;
+  color: #F4F3EE;
+}
+
+@font-face {
+    font-family: 'New Kansas';
+    src: url(assets/font/NewKansas-Medium.woff2);
+}
+
+header {
+    background-color: #57745B;
+    color: #F4F3EE;
+    margin: -16px -8px -8px -8px;
+    padding: 20px;
+    height: 600px;
+}
+
+nav {
+    background-color: #F4F3EE;
+    color: #040F0F;
+    padding-left: 0px;
+    margin: 0px -20px 0px -20px;
+    box-shadow: 0px 0px 20px rgb(4 15 15 / 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 6px solid #57745B;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    margin: 0px;
+    justify-content: left;
+    gap: 30px;
+}
+
+nav ul li {
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    transition: 0.5s;
+    width: 70px;
+    text-align: center;
+    font-family: "GT Pressura Regular";
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+nav ul li:hover {
+    background-color: #d5d4cc;
+    cursor: pointer;
+}
+
+nav ul #logo {
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+    font-family: "New Kansas";
+    text-transform: none;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: default;
+}
+
+nav ul #logo:hover {
+    background-color: #F4F3EE;
+}
+
+#titre-accueil {
+    font-family: 'New Kansas';
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    font-style: normal;
+    font-size: 40px;
+    margin: 540px 0px 10px 0px
+}
+
+main {
+    padding-left: 16px;
+    padding-top: 20px;
+}
+
+main section {
+    margin-top: 100px;
+    grid-template-areas: "Texte Image"
+    "Image1 Texte1"
+    "Texte2 Texte2";
+    display: grid;
+    grid-template-rows: 420px 400px 150px;
+    grid-template-columns: 1fr fit-content(696s);
+    gap: 120px 20px;
+}
+
+main h1 {
+    font-family: "GT Pressura Pro Bold";
+    font-size: 26;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #040F0F;
+}
+
+main p {
+    margin-top: 10px;
+    font-family: "GT Pressura Regular";
+    font-weight: 900;
+    font-size: 18px;
+    color: #040F0F;
+}
+
+main strong {
+    color: #57745B;
+}
+
+.texte-secondaire {
+    color: #807f7c;
+    font-family: "GT Pressura Light";
+}
+
+#intro {
+    grid-area: Texte;
+    margin-right: 20px;
+}
+
+#intro-image {
+    grid-area: Image;
+}
+
+#intro-image img {
+    height: 395px;
+    width: auto;
+    object-fit: contain;
+    margin: 22px 20px 0px 0px;
+}
+
+#texte1 {
+    grid-area: Texte1;
+    text-align: right;
+    margin-right: 20px;
+}
+
+#img1 {
+    grid-area: Image1;
+}
+
+#img1 img {
+    height: 400px;
+    width: auto;
+    margin-top: 22px;
+}
+
+#texte2 {
+    grid-area: Texte2;
+}
