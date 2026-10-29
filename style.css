@@ -99,7 +99,7 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-nav ul li a:link {
+nav a:any-link {
     color: #040F0F;
     text-decoration: none;
 }
