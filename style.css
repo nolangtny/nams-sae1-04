@@ -28,6 +28,22 @@ header {
     height: 600px;
 }
 
+#header-nolan {
+    background-color: #273469;
+}
+
+#header-alicia {
+    background-color: #F291A0;
+}
+
+#header-serena {
+    background-color: #BA324F;
+}
+
+#header-mahe {
+    background-color: #57745B;
+}
+
 nav {
     background-color: #F4F3EE;
     color: #040F0F;
@@ -65,6 +81,11 @@ nav ul li {
 nav ul li:hover {
     background-color: #d5d4cc;
     cursor: pointer;
+}
+
+nav ul li:link {
+    color: #040F0F;
+    text-decoration: none;
 }
 
 nav ul #logo {
