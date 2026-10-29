@@ -56,19 +56,19 @@ nav {
     border-bottom: 6px solid #57745B;
 }
 
-nav > #header-nolan {
+#header-nolan > nav {
     background-color: #273469;
 }
 
-nav > #header-alicia {
+#header-alicia > nav {
     background-color: #F291A0;
 }
 
-nav > #header-serena {
+#header-serena > nav {
     background-color: #BA324F;
 }
 
-nav > #header-mahe {
+#header-mahe > nav {
     background-color: #57745B;
 }
 
