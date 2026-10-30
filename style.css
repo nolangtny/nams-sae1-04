@@ -30,18 +30,22 @@ header {
 
 #header-nolan {
     background-color: #273469;
+    height: 202px;
 }
 
 #header-alicia {
     background-color: #F291A0;
+    height: 202px;
 }
 
 #header-serena {
     background-color: #BA324F;
+    height: 202px;
 }
 
 #header-mahe {
     background-color: #57745B;
+    height: 202px;
 }
 
 nav {
@@ -131,7 +135,7 @@ header img {
     letter-spacing: 0.2px;
     font-style: normal;
     font-size: 40px;
-    margin: -65px 0px 10px 0px
+    margin-top: -77px;
 }
 
 .titre-equipe {
@@ -140,7 +144,7 @@ header img {
     letter-spacing: 0.2px;
     font-style: normal;
     font-size: 40px;
-    margin: 500px 0px 10px 0px
+    margin: 150px 0px 10px 0px;
 }
 
 main {
