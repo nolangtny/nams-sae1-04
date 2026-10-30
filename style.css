@@ -134,6 +134,15 @@ header img {
     margin: -65px 0px 10px 0px
 }
 
+.titre-equipe {
+    font-family: 'New Kansas';
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    font-style: normal;
+    font-size: 40px;
+    margin: 500px 0px 10px 0px
+}
+
 main {
     padding-left: 16px;
     padding-top: 20px;
