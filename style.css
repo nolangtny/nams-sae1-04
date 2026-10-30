@@ -161,11 +161,16 @@ main section {
 
 main h1 {
     font-family: "GT Pressura Pro Bold";
-    font-size: 26;
+    font-size: 26px;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px;
     color: #040F0F;
+}
+
+main h2 {
+    font-family: "GT Pressura Light";
+    font-size: 22px;
 }
 
 main p {
