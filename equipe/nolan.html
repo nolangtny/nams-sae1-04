@@ -23,34 +23,12 @@
             </nav>
             <h1 class="titre-equipe">Nolan</h1>
         </header>
-        <main id="main-nolan">
+        <main>
+        <section id="nolan-r2">
             <div>
                 <h1>Conception - Interrogation d'une base de données</h1>
                 <h2><strong>Requête 2</strong> <strong class="tab-bold">CA total</strong> généré, à ce jour, avec les fournisseurs de l'UE.<br>
                 <a class="texte-secondaire">Réflexion sur l'origine des produits</a></h2>
-            </div>
-            <div>
-                <pre>
-                    <code>
-    SELECT
-        ROUND(SUM(P.CoutAchat * C.CoefMarge * D.Quantité * (1 - D.[Remise (%)])),2) AS CATotalUE
-                    </code>
-
-                    <code>
-    FROM
-        (((DetailCommande AS D INNER JOIN Produit AS P ON D.[Réf produit] = P.RefProd) 
-                    INNER JOIN Categorie AS C ON P.CodeCateg = C.CodeCateg)
-                    INNER JOIN Fournisseur AS F ON P.NoFour = F.NoFour)
-                    INNER JOIN Pays AS Y ON F.NoPays = Y.NoPays
-                    </code>
-                    <code>
-    WHERE
-        Y.UE = 'Membre';
-                    </code>
-                    <code>
-    <a>ORDER BY</a>
-                    </code>
-                </pre>
             </div>
             <div>
                 <p>
@@ -73,6 +51,38 @@
                     Pas besoin d'order by car le résultat qu'on obtient n'est qu'une seule cellule (deux si on compte l'étiquette de la colonne).
                 </p>
             </div>
+            <div>
+                <pre>
+                    <code>
+    SELECT
+        ROUND(SUM(P.CoutAchat * 
+                    C.CoefMarge * 
+                    D.Quantité * 
+                    (1 - D.[Remise (%)]))
+            ,2) AS CATotalUE
+                    </code>
+
+                    <code>
+    FROM
+        (((DetailCommande AS D 
+                    INNER JOIN Produit AS P ON D.[Réf produit] = P.RefProd) 
+                    INNER JOIN Categorie AS C ON P.CodeCateg = C.CodeCateg)
+                    INNER JOIN Fournisseur AS F ON P.NoFour = F.NoFour)
+                    INNER JOIN Pays AS Y ON F.NoPays = Y.NoPays
+                    </code>
+                    <code>
+    WHERE
+        Y.UE = 'Membre';
+                    </code>
+                    <code>
+    <a>ORDER BY</a>
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section>
+            <h2><strong>Proposition d'indicateur pertinent</strong> pour KDou</h2>
+        </section>
         </main>
     </body>
 </html>
