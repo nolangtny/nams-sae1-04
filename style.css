@@ -348,6 +348,7 @@ tr td:nth-child(2) {
 }
 .etapes {
     border: solid black;
+    background-color: rgba(31, 144, 31, 0.1);
 }
 .etapes th {
     border-bottom: solid black;
