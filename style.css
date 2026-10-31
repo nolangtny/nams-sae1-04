@@ -233,7 +233,7 @@ main strong {
 .tab-organisation {
     font-family: "GT Pressura Regular";
     font-size: 18px;
-    border: 4px solid black;
+    border: 4px solid #040F0F;
     border-radius: 2px;
 }
 .tab-organisation th {
@@ -241,21 +241,22 @@ main strong {
 }
 .tab-bold {
     font-weight: bold;
+    color: ;
 }
-tr:nth-child(2) {
+tr td:nth-child(2) {
     text-align: center;
 }
 #nolan-lib {
-    background-color: rgb(31 144 31 / 0.2);
-    border-top: solid black;
+    background-color: rgb(31 144 31 / 0.1);
+    border-top: solid #040F0F;
 }
 #alicia-lib {
-    border-top: solid black;
+    border-top: solid #040F0F;
 }
 #serena-lib {
-    background-color: rgb(31 144 31 / 0.2);
-    border-top: solid black;
+    background-color: rgba(31, 144, 31, 0.1);
+    border-top: solid #040F0F;
 }
 #mahe-lib {
-    border-top: solid black;
+    border-top: solid #040F0F;
 }
