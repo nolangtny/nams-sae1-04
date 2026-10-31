@@ -233,7 +233,7 @@ main strong {
 .tab-organisation {
     font-family: "GT Pressura Regular";
     font-size: 18px;
-    border: 4px solid #040F0F;
+    border: 2px solid #040F0F;
     border-radius: 2px;
 }
 .tab-organisation th {
@@ -241,7 +241,7 @@ main strong {
 }
 .tab-bold {
     font-weight: bold;
-    color: ;
+    color: #040F0F;
 }
 tr td:nth-child(2) {
     text-align: center;
