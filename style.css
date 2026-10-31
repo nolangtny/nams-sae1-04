@@ -231,13 +231,12 @@ main strong {
 }
 
 .tab-organisation {
-    font-family: "GT Pressura Pro";
+    font-family: "GT Pressura Regular";
     font-size: 18px;
     border: solid black;
 }
 .tab-organisation th {
     font-family: "New Kansas";
-    border: solid black;
 }
 #under {
     text-decoration-line: underline;
