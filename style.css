@@ -349,10 +349,6 @@ tr td:nth-child(2) {
 .etapes {
     border: solid black;
 }
-.etapes th {
-    border-bottom: solid black;
-    border-right: solid black;
-}
 
 footer {
     background-color: #BA324F;
