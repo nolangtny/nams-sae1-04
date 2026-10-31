@@ -167,10 +167,7 @@ header img {
 main {
     padding-left: 16px;
     padding-top: 20px;
-}
-
-main section {
-    margin-top: 100px;
+    margin: 120px 0px 200px 0px;
     grid-template-areas: "Texte Image"
     "Image1 Texte1"
     "Texte2 Texte2"
@@ -178,7 +175,7 @@ main section {
     display: grid;
     grid-template-rows: 400px 400px 200px 350px;
     grid-template-columns: 1fr fit-content(696s);
-    gap: 120px 20px;
+    gap: 140px 0px;
 }
 
 .main-equipe {
@@ -224,8 +221,12 @@ main strong {
 
 #intro {
     grid-area: Texte;
-    background-color: rgba(73, 146, 73, 0.3);
-    padding: 0px 10px 10px 10px;
+    background-color: rgba(73, 146, 73, 0.4);
+    padding: 0px 20px 20px 20px;
+}
+
+#intro .texte-secondaire strong {
+    color: #4e5d51;
 }
 
 #intro-image {
@@ -241,9 +242,13 @@ main strong {
 
 #texte1 {
     grid-area: Texte1;
-    padding: 0px 10px 10px 10px;
+    padding: 0px 20px 20px 20px;
     margin-right: 20px;
     background-color: rgba(73, 146, 73, 0.4);
+}
+
+#texte1 p {
+    margin-bottom: 10px;
 }
 
 #texte1 ul {
@@ -251,10 +256,11 @@ main strong {
     font-family: "GT Pressura Regular";
     font-size: 18px;
     color: #040F0F;
+    margin-top: 10px;
 }
 
 #texte1 li {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #img1 {
@@ -263,7 +269,7 @@ main strong {
 
 #img1 img {
     height: 400px;
-    width: auto;
+    width: 710px;
 }
 
 #texte2 {
@@ -287,17 +293,32 @@ main strong {
     grid-area: Tab;
     display: flex;
     justify-content: center;
+    scroll-margin-top: 100px;
 }
 
 td strong:first-child {
     color: #57745B;
 }
 
+tr td:first-child {
+    padding: 0px 10px;
+}
+
+tr th:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+tr th:nth-child(2) {
+    width: 100px;
+    text-align: center;
+}
+
 #tab-organisation {
     font-family: "GT Pressura Regular";
     font-size: 18px;
-    border: 2px solid #040F0F;
-    border-radius: 2px;
+    border: 1.5px solid #040F0F;
+    border-radius: 8px;
     caption-side: bottom;
     padding: 0px 10px;
 }
@@ -324,4 +345,12 @@ tr td:nth-child(2) {
 }
 #mahe-lib {
     border-top: solid #040F0F;
+}
+
+footer {
+    background-color: #BA324F;
+    color: #F4F3EE;
+    height: 300px;
+    padding: 40px;
+    margin: 0px -10px -20px -20px;
 }

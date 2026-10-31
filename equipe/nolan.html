@@ -28,9 +28,23 @@
                 <div>
                     <div>
                     <h1>CONCEPTION - INTERROGATION D'UNE BASE DE DONNÉES</h1>
-                    <h2><strong>Requête 2</strong> <strong class="tab-bold">Chiffre d'affaire</strong> généré (montant total des ventes) annuel pour les catégories desserts ou boissons.<br>
-                        <a class="texte-secondaire">Réflexion en lien avec la santé</a>
-                    </h2>
+                    <h2><strong>Requête 2</strong> <strong class="tab-bold">CA total</strong> généré, à ce jour, avec les fournisseurs de l'UE.<br>
+                    <a class="texte-secondaire">Réflexion sur l'origine des produits</a></h2>
+                    <pre>
+                        <code>
+                            SELECT
+                                ROUND(SUM(P.CoutAchat * C.CoefMarge * D.Quantité * (1 - D.[Remise (%)])),2) AS CATotalUE
+                            FROM
+                                (
+                                    (
+                                        (DetailCommande AS D INNER JOIN Produit AS P ON D.[Réf produit] = P.RefProd
+                                        ) INNER JOIN Categorie AS C ON P.CodeCateg = C.CodeCateg
+                                    ) INNER JOIN Fournisseur AS F ON P.NoFour = F.NoFour
+                                ) INNER JOIN Pays AS Y ON F.NoPays = Y.NoPays
+                            WHERE
+                                Y.UE = 'Membre';
+                        </code>
+                    </pre>
                 </div>
                     <h1>Titre h1</h1>
                     <h2>Sous titre h2</h2>
