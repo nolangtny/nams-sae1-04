@@ -347,6 +347,18 @@ tr td:nth-child(2) {
     border-top: solid #040F0F;
 }
 
+.main-equipe code:first-child {
+    color: #d34866;
+}
+
+.main-equipe code:nth-child(2) {
+    color: #384ea5;
+}
+
+.main-equipe code:last-child {
+    color: #67a870;
+}
+
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
