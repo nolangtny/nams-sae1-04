@@ -362,13 +362,11 @@ table.etapes caption {
     border-bottom: none;
 }
 
-
 table.etapes th, table.etapes td {
     border: 1px solid #dddddd;
     padding: 12px;
     text-align: center;
 }
-
 
 table.etapes th {
     background-color: #F291A0;
@@ -379,6 +377,7 @@ table.etapes th {
 table.etapes tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
 table.etapes td img {
     max-width: 250px;
     height: auto;
