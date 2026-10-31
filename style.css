@@ -101,7 +101,6 @@ nav ul li {
 nav ul li:hover {
     background-color: #d5d4cc;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 nav a:any-link {
@@ -232,6 +231,12 @@ main strong {
 }
 
 .tab-organisation {
+    font-family: "GT Pressura Pro";
+    font-size: 18px;
+    border: solid black;
+}
+.tab-organisation th {
+    font-family: "New Kansas";
     border: solid black;
 }
 #under {
