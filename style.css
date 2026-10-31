@@ -346,8 +346,46 @@ tr td:nth-child(2) {
 #mahe-lib {
     border-top: solid #040F0F;
 }
-.etapes {
-    border: solid black;
+
+table.etapes {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table.etapes caption {
+    text-align: center;
+    padding: 12px;
+    font-size: 0.95em;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+
+table.etapes th, table.etapes td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: center;
+}
+
+
+table.etapes th {
+    background-color: #F291A0;
+    color: white;
+    font-weight: bold;
+}
+
+table.etapes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table.etapes td img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
 }
 
 footer {
