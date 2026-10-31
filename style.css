@@ -61,6 +61,22 @@ nav {
     border-bottom: 6px solid #57745B;
 }
 
+#header-nolan ul li:nth-child(3) a:any-link {
+    color: #273469;
+}
+
+#header-alicia ul li:nth-child(4) a:any-link {
+    color: #F291A0;
+}
+
+#header-serena ul li:nth-child(5) a:any-link {
+    color: #BA324F;
+}
+
+#header-mahe ul li:nth-child(6) a:any-link {
+    color: #57745B;
+}
+
 #header-nolan > nav {
     border-bottom: 6px solid #273469;
 }
