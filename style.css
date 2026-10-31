@@ -347,7 +347,6 @@ tr td:nth-child(2) {
     border-top: solid #040F0F;
 }
 
-<<<<<<< HEAD
 .main-equipe code:first-child {
     color: #d34866;
 }
@@ -361,11 +360,11 @@ tr td:nth-child(2) {
 }
 
 table.etapes {
-    font-family: Arial, sans-serif;
-=======
+    font-family: "GT Pressura Regular";
+}
+
 .etapes {
-    font-family: Arial;
->>>>>>> aeaea80913035d6a15fd306a15b8cf885ab15053
+    font-family: "GT Pressura Regular";
     margin: 20px auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
