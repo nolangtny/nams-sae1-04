@@ -346,6 +346,12 @@ tr td:nth-child(2) {
 #mahe-lib {
     border-top: solid #040F0F;
 }
+.etapes {
+    border: solid black;
+}
+.etapes th {
+    border-bottom: solid black;
+}
 
 footer {
     background-color: #BA324F;
