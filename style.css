@@ -233,13 +233,17 @@ main strong {
 .tab-organisation {
     font-family: "GT Pressura Regular";
     font-size: 18px;
-    border: solid black;
+    border: 4px solid black;
+    border-radius: 2px;
 }
 .tab-organisation th {
     font-family: "New Kansas";
 }
-#under {
-    text-decoration-line: underline;
+.tab-bold {
+    font-weight: bold;
+}
+tr:nth-child(2) {
+    text-align: center;
 }
 #nolan-lib {
     background-color: rgb(31 144 31 / 0.2);
