@@ -348,7 +348,7 @@ tr td:nth-child(2) {
 }
 
 table.etapes {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 20px auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
