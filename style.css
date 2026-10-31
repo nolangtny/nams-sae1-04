@@ -101,6 +101,7 @@ nav ul li {
 nav ul li:hover {
     background-color: #d5d4cc;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 nav a:any-link {
