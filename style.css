@@ -229,3 +229,24 @@ main strong {
 #texte2 {
     grid-area: Texte2;
 }
+
+.tab-organisation {
+    border: solid black;
+}
+#under {
+    text-decoration-line: underline;
+}
+#nolan-lib {
+    background-color: rgb(31 144 31 / 0.2);
+    border-top: solid black;
+}
+#alicia-lib {
+    border-top: solid black;
+}
+#serena-lib {
+    background-color: rgb(31 144 31 / 0.2);
+    border-top: solid black;
+}
+#mahe-lib {
+    border-top: solid black;
+}
