@@ -23,44 +23,56 @@
             </nav>
             <h1 class="titre-equipe">Nolan</h1>
         </header>
-        <main>
-            <section class="main-equipe">
-                <div>
-                    <div>
-                    <h1>Conception - Interrogation d'une base de données</h1>
-                    <h2><strong>Requête 2</strong> <strong class="tab-bold">CA total</strong> généré, à ce jour, avec les fournisseurs de l'UE.<br>
-                    <a class="texte-secondaire">Réflexion sur l'origine des produits</a></h2>
-                    <pre>
-                        <code>
+        <main id="main-nolan">
+            <div>
+                <h1>Conception - Interrogation d'une base de données</h1>
+                <h2><strong>Requête 2</strong> <strong class="tab-bold">CA total</strong> généré, à ce jour, avec les fournisseurs de l'UE.<br>
+                <a class="texte-secondaire">Réflexion sur l'origine des produits</a></h2>
+            </div>
+            <div>
+                <pre>
+                    <code>
     SELECT
         ROUND(SUM(P.CoutAchat * C.CoefMarge * D.Quantité * (1 - D.[Remise (%)])),2) AS CATotalUE
-                        </code>
+                    </code>
 
-                        <code>
+                    <code>
     FROM
         (((DetailCommande AS D INNER JOIN Produit AS P ON D.[Réf produit] = P.RefProd) 
                     INNER JOIN Categorie AS C ON P.CodeCateg = C.CodeCateg)
                     INNER JOIN Fournisseur AS F ON P.NoFour = F.NoFour)
                     INNER JOIN Pays AS Y ON F.NoPays = Y.NoPays
-                        </code>
-                        <code>
+                    </code>
+                    <code>
     WHERE
         Y.UE = 'Membre';
-                        </code>
-                    </pre>
-                </div>
-                    <h1>Titre h1</h1>
-                    <h2>Sous titre h2</h2>
-                    <p>
-                       Paragraphe p, avec texte <strong>mise en avant avec strong</strong> si besoin.<br>
-                       Ainsi que du :
-                    </p>
-                    <p class="texte-secondaire">
-                        Texte secondaire avec la class texte-secondaire, si besoin.<br>
-                        <strong>Voir code pour la mise en page</strong>
-                    </p>
-                </div>
-            </section>
+                    </code>
+                    <code>
+    <a>ORDER BY</a>
+                    </code>
+                </pre>
+            </div>
+            <div>
+                <p>
+                    <a id="etape-1">Première étape : FROM</a><br>
+                    Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage). J'écris SELECT mais je le garde pour plus tard.<br>
+                    J'ai besoin de DetailCommande pour les quatités et les remises dans mon calcul du CA, de Produit pour le coût d'achat, de Catégorie pour le CoefMarge, et de Fournisseur et Pays pour sélectionner seulement les fournisseurs UE.
+                </p>
+                <p>
+                    <a id="etape-2">Deuxième étape : WHERE</a><br>
+                    Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage).<br>
+                    J'ai besoin de DetailCommande pour les quatités et les remises dans mon calcul du CA, de Produit pour le coût d'achat, de Catégorie pour le CoefMarge, et de Fournisseur et Pays pour sélectionner seulement les fournisseurs UE.
+                </p>
+                <p>
+                    <a id="etape-3">Troisième étape : SELECT</a><br>
+                    Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage).<br>
+                    J'ai besoin de DetailCommande pour les quatités et les remises dans mon calcul du CA, de Produit pour le coût d'achat, de Catégorie pour le CoefMarge, et de Fournisseur et Pays pour sélectionner seulement les fournisseurs UE.
+                </p>
+                <p>
+                    <a id="etape-4">Dernière étape : ORDER BY</a><br>
+                    Pas besoin d'order by car le résultat qu'on obtient n'est qu'une seule cellule (deux si on compte l'étiquette de la colonne).
+                </p>
+            </div>
         </main>
     </body>
 </html>
