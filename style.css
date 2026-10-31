@@ -168,6 +168,9 @@ main {
     padding-left: 16px;
     padding-top: 20px;
     margin: 120px 0px 200px 0px;
+}
+
+#main-index {
     grid-template-areas: "Texte Image"
     "Image1 Texte1"
     "Texte2 Texte2"
@@ -201,6 +204,11 @@ main {
 #nolan-r2 div:nth-child(3) {
     width: 42%;
 }
+
+#nolan-indic {
+    display: inline-block;
+}
+
 
 main h1 {
     font-family: "GT Pressura Pro Bold";
