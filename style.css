@@ -181,6 +181,11 @@ main section {
     gap: 120px 20px;
 }
 
+.main-equipe {
+    display: flex;
+    flex-direction: column;
+}
+
 main h1 {
     font-family: "GT Pressura Pro Bold";
     font-size: 32px;
