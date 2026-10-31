@@ -156,7 +156,8 @@ main section {
     margin-top: 100px;
     grid-template-areas: "Texte Image"
     "Image1 Texte1"
-    "Texte2 Texte2";
+    "Texte2 Texte2"
+    "Tab Tab";
     display: grid;
     grid-template-rows: 420px 400px 150px;
     grid-template-columns: 1fr fit-content(696s);
@@ -186,12 +187,16 @@ main p {
 }
 
 main strong {
-    color: #57745B;
+    color: #BA324F;
 }
 
 .texte-secondaire {
     color: #807f7c;
     font-family: "GT Pressura Light";
+}
+
+.texte-secondaire strong {
+    color: #57745B;
 }
 
 #intro {
@@ -228,15 +233,38 @@ main strong {
 
 #texte2 {
     grid-area: Texte2;
+    text-align: center;
 }
 
-.tab-organisation {
+#texte2 a:any-link {
+    color: #57745B;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#texte2 a:any-link:hover {
+    color: #96bc9b;
+    text-decoration: underline;
+}
+
+#tab {
+    grid-area: Tab;
+    display: flex;
+    justify-content: center;
+}
+
+td strong:first-child {
+    color: #57745B;
+}
+
+#tab-organisation {
     font-family: "GT Pressura Regular";
     font-size: 18px;
     border: 2px solid #040F0F;
     border-radius: 2px;
+    caption-side: bottom;
 }
-.tab-organisation th {
+#tab-organisation th {
     font-family: "New Kansas";
 }
 .tab-bold {
