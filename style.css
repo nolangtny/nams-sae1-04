@@ -160,7 +160,7 @@ main section {
     "Texte2 Texte2"
     "Tab Tab";
     display: grid;
-    grid-template-rows: 420px 400px 150px;
+    grid-template-rows: 400px 400px 200px 350px;
     grid-template-columns: 1fr fit-content(696s);
     gap: 120px 20px;
 }
@@ -202,7 +202,8 @@ main strong {
 
 #intro {
     grid-area: Texte;
-    margin-right: 20px;
+    background-color: rgba(73, 146, 73, 0.3);
+    padding: 0px 10px 10px 10px;
 }
 
 #intro-image {
@@ -210,16 +211,17 @@ main strong {
 }
 
 #intro-image img {
-    height: 395px;
+    height: 400px;
     width: auto;
     object-fit: contain;
-    margin: 22px 20px 0px 0px;
+    margin: 0px 20px 0px 0px;
 }
 
 #texte1 {
     grid-area: Texte1;
     text-align: right;
     margin-right: 20px;
+    background-color: rgba(73, 146, 73, 0.4);
 }
 
 #img1 {
@@ -229,22 +231,26 @@ main strong {
 #img1 img {
     height: 400px;
     width: auto;
-    margin-top: 22px;
 }
 
 #texte2 {
     grid-area: Texte2;
+    padding-top: 10px;
     text-align: center;
 }
 
+#texte2 .texte-secondaire {
+    color: #4a4844;
+}
+
 #texte2 a:any-link {
-    color: #57745B;
+    color: #BA324F;
     text-decoration: none;
     transition: 0.2s;
 }
 
 #texte2 a:any-link:hover {
-    color: #96bc9b;
+    color: #4a4844;
     text-decoration: underline;
 }
 
