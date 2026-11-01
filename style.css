@@ -708,7 +708,7 @@ table.etapes {
 .requete-indiv #SQL{
     border: 2px solid rgba(46, 125, 50, 1);
     border-radius: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 #f-result {
     margin-right: 0px;
