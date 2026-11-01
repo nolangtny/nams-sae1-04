@@ -205,6 +205,18 @@ main {
         align-self: center;
         margin: 0px;
     }
+
+    #main-index #img1, #main-index #intro-image {
+        width: 640px;
+        height: auto;
+        justify-self: center;
+    }
+
+    #main-index div img {
+        width: 640px;
+        height: auto;
+        justify-self: center;
+    }
 }
 
 .main-equipe {
@@ -333,6 +345,7 @@ main strong {
     padding-top: 10px;
     text-align: center;
     width: 800px;
+    justify-self: center;
 }
 
 #texte2 a:any-link {
