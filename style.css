@@ -705,7 +705,7 @@ table.etapes {
         flex-direction: column;
     }
 }
-.requete-indiv SQL{
+.requete-indiv #SQL{
     border: solid rgba(46, 125, 50, 1);
     border-radius: 10px;
 }
