@@ -35,7 +35,7 @@ header {
 }
 
 #header-alicia {
-    background-color: #F291A0;
+    background-color: #86ba64;
     height: 202px;
 }
 
@@ -66,7 +66,7 @@ nav {
 }
 
 #header-alicia ul li:nth-child(4) a:any-link {
-    color: #F291A0;
+    color: #86ba64;
 }
 
 #header-serena ul li:nth-child(5) a:any-link {
@@ -82,7 +82,7 @@ nav {
 }
 
 #header-alicia > nav {
-    border-bottom: 6px solid #F291A0;
+    border-bottom: 6px solid #86ba64;
 }
 
 #header-serena > nav {
@@ -439,7 +439,7 @@ table.etapes {
 }
 
 .etapes th {
-    background-color: #F291A0;
+    background-color: #86ba64;
     color: white;
     font-weight: bold;
 }
