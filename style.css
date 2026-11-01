@@ -693,7 +693,7 @@ table.etapes {
     padding: 20px;
     box-sizing: border-box;
 }
-.requete-indiv img, .requete-f img {
+.requete-indiv img, .requete-f img, {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
