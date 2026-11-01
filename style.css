@@ -25,30 +25,36 @@ header {
     background-color: #57745B;
     color: #F4F3EE;
     margin: -16px -8px -8px -8px;
-    padding: 20px;
+    padding: 20px 0px;
     height: 552px;
     background-image: url(assets/images/header.png);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #header-nolan {
-    background-color: #57745B;
     height: 202px;
+    background-image: none;
+    background-color: #57745B;
 }
 
 #header-alicia {
     background-color: #57745B;
     height: 202px;
+    background-image: none;
 }
 
 #header-serena {
     background-color: #57745B;
     height: 202px;
+    background-image: none;
 }
 
 #header-mahe {
     background-color: #57745B;
     height: 202px;
+    background-image: none;
 }
 
 nav {
@@ -134,6 +140,7 @@ nav ul #logo:hover {
     font-style: normal;
     font-size: 40px;
     margin-top: 500px;
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 850px) {
@@ -150,7 +157,7 @@ nav ul #logo:hover {
     letter-spacing: 0.2px;
     font-style: normal;
     font-size: 40px;
-    margin: 150px 0px 10px 0px;
+    margin: 150px 0px 10px 20px;
 }
 
 main {
