@@ -166,7 +166,7 @@ nav ul #logo:hover {
 }
 
 main {
-    padding: 100px 0px 200px 16px
+    padding: 100px 0px 200px 10px !important;
 }
 
 #main-index {
@@ -312,6 +312,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 40px;
         gap: 0px;
     }
 
