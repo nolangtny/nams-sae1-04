@@ -905,7 +905,7 @@ table.etapes {
     padding: 20px;
     box-sizing: border-box;
 }
-.requete-indiv img, .requete-f img, {
+.requete-indiv img, .requete-f img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
@@ -922,10 +922,9 @@ table.etapes {
     border-radius: 8px;
     background-color: rgba(31, 144, 31, 0.1);
 }
-.container-2-colonne section img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.container-2-colonnes section img {
+    display: block;
+    margin: 0px auto;
 }
     
 footer {
