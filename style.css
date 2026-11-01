@@ -693,7 +693,7 @@ table.etapes {
     padding: 20px;
     box-sizing: border-box;
 }
-.requete-indiv img, .requete-f img {
+.requete-indiv img, .requete-f img, {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
@@ -705,9 +705,14 @@ table.etapes {
         flex-direction: column;
     }
 }
-.requete-indiv SQL{
-    border: solid rgba(46, 125, 50, 1);
+.requete-indiv #SQL{
+    border: 2px solid rgba(46, 125, 50, 1);
     border-radius: 10px;
+    margin: 10px;
+}
+#f-result {
+    margin-right: 0px;
+    margin-left: 10px;
 }
 
 footer {

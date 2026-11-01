@@ -1,46 +1,209 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="preload" href="/assets/font/NewKansas-Medium.woff2" as="font" type="font/woff2" crossorigin>
-        <link href="https://db.onlinewebfonts.com/c/2ea3b87b231d6d46708c756a0e04610e?family=GT+Pressura+Regular" rel="stylesheet">
-        <link href="https://db.onlinewebfonts.com/c/fa6584b49f2dbb17b7483544bfa0b654?family=GT+Pressura+Pro+Bold" rel="stylesheet" type="text/css">
-        <link href="https://db.onlinewebfonts.com/c/16842c927f8ef77adc29f7c5e27929ca?family=GT+Pressura+Light" rel="stylesheet" type="text/css">
-        <title>Rapport - SAÉ 1.04</title>
-    </head>
-    <body>
-        <header id="header-mahe">
-            <nav>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preload" href="/assets/font/NewKansas-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://db.onlinewebfonts.com/c/2ea3b87b231d6d46708c756a0e04610e?family=GT+Pressura+Regular" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/fa6584b49f2dbb17b7483544bfa0b654?family=GT+Pressura+Pro+Bold" rel="stylesheet" type="text/css">
+    <link href="https://db.onlinewebfonts.com/c/16842c927f8ef77adc29f7c5e27929ca?family=GT+Pressura+Light" rel="stylesheet" type="text/css">
+    <title>Rapport - SAÉ 1.04</title>
+</head>
+
+<body>
+    <header id="header-mahe">
+        <nav>
+            <ul>
+                <li id="logo">KDou</li>
+                <li><a href="https://nolangtny.github.io/nams-sae1-04/">Accueil</a></li>
+                <li><a href="nolan.html">Nolan</a></li>
+                <li><a href="alicia.html">Alicia</a></li>
+                <li><a href="serena.html">Serena</a></li>
+                <li><a href="mahe.html">Mahé</a></li>
+            </ul>
+        </nav>
+        <h1 class="titre-equipe">Mahé</h1>
+    </header>
+    <main>
+        <section class="main-equipe">
+            <div>
+                <h1>Analyse des données : A-t-on des clients pilotes d'un réseau partenaire ayant autant de commandes que les clients partenaires ?</h1>
+
+                <p>
+                    L'idée est de comparer le volume de commandes du pilote avec celui de son réseau. Si un pilote reçoit un nombre similaire de commandes à celui de son réseau alors le pilote a un poids comparable à celui de son réseau.
+                    <br> Si le pilote reçoit un nombre plus important de commandes que son réseau alors le réseau est concentré sur le pilote et le groupement est intéressant pour la réduction du nombre de livraison.
+                    <br> Si en revanche les partenaires reçoivent plus de commandes que le pilote, le réseau n'est peut-être pas intéressant et il faudrait envisager de changer de pilote ou d'organisation.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Étapes</th>
+                            <th>Code SQL</th>
+                            <th>Résultat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                On cherche le nombre de commandes par clients.
+                                <br> On utilise LEFT JOIN pour avoir aussi les clients n'ayant passé aucune commande.
+                                <br> On modifie aussi le nom de la clé primaire de la table commande de N° commande à Ncommande.
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                On cherche la liste de partenaires par pilote.
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                On fait la somme des commandes des partenaires dans chaque réseau.
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                On trouve la différence entre le nombre de commandes passées par le pilote et celles passées par ses partenaires.
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Analyse des résultats</h2>
+
+                <p>
+                    On voit que les réseaux de la <strong>Crêperie de la gare (GALED)</strong> et de la
+                    <strong>Table nantaise (DRACD)</strong> sont les plus équilibrés.
+                    <br> Le réseau piloté par <strong>Pâtes à succès (FRANS)</strong> est le plus concentré car son partenaire n'a passé aucune commande.
+                    <br> On peut se demander si <strong>Le Nostradamu (NOSGK)</strong> est le choix le plus judicieux comme client pilote car son nombre de commandes passées est très inférieur à celui de ses partenaires.
+                </p>
+
+                <p class="texte-secondaire">
+                    L'ambiguïté est de savoir si les commandes sont passées par les clients partenaires ou si elles sont passées par le client pilote pour être ensuite redistribuées. La base de données pourrait être modifiée pour préciser l'adresse de livraison.
+                </p>
+
+            </div>
+        </section>
+        <section class="main-equipe">
+            <div>
+
+                <h1>Proposition d’indicateur : Couverture des villes de France par les réseaux</h1>
+
+                <h2>Énoncé de la requête</h2>
+
+                <p>
+                    Pour chaque ville, quel est le niveau de couverture du réseau de partenariat client afin d'évaluer dans quelle mesure les livraisons peuvent être regroupées ?
+                </p>
+
+                <h2>Objectif</h2>
+
+                <p>
+                    Cette requête permet de comparer :
+                </p>
+
                 <ul>
-                    <li id="logo">
-                        <label for="toggle" id="icone-menu">⋯</label>KDou
-                        <input type="checkbox" id="toggle">
-                    </li>
-                    <li><a href="https://nolangtny.github.io/nams-sae1-04/">Accueil</a></li>
-                    <li><a href="/nams-sae1-04/equipe/nolan.html">Nolan</a></li>
-                    <li><a href="/nams-sae1-04/equipe/alicia.html">Alicia</a></li>
-                    <li><a href="/nams-sae1-04/equipe/serena.html">Serena</a></li>
-                    <li><a href="/nams-sae1-04/equipe/mahe.html">Mahé</a></li>
+                    <li>le nombre total de clients dans chaque ville ;</li>
+                    <li>le nombre de clients appartenant à un réseau partenaire ;</li>
+                    <li>le nombre de clients isolés (sans partenariat) ;</li>
+                    <li>le pourcentage de couverture du réseau dans la ville.</li>
                 </ul>
-            </nav>
-            <h1 class="titre-equipe">Mahé</h1>
-        </header>
-        <main>
-            <section class="main-equipe">
-                <div>
-                    <h1>Titre h1</h1>
-                    <h2>Sous titre h2</h2>
-                    <p>
-                       Paragraphe p, avec texte <strong>mise en avant avec strong</strong> si besoin.<br>
-                       Ainsi que du :
-                    </p>
-                    <p class="texte-secondaire">
-                        Texte secondaire avec la class texte-secondaire, si besoin.<br>
-                        <strong>Voir code pour la mise en page</strong>
-                    </p>
-                </div>
-            </section>
-        </main>
-    </body>
+
+                <p>
+                    L'objectif final est d'identifier les villes où le partenariat est le plus développé afin de favoriser les <strong>livraisons groupées</strong> et de repérer les villes où de nombreux clients restent isolés.
+                </p>
+
+                <h2>Intérêt dans le contexte</h2>
+
+                <p>
+                    KDou utilise les réseaux de partenaires pour optimiser sa logistique. Lorsqu'un client pilote réceptionne les commandes de plusieurs partenaires, plusieurs livraisons peuvent être regroupées. Cela réduit les coûts de transport, le nombre de trajets nécessaires
+                    et simplifie l'organisation des tournées de livraison.
+                </p>
+
+                <h2>Construction de la requête</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Requête</th>
+                            <th>Fonction</th>
+                            <th>Résultat</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>
+                                Cette requête calcule le nombre total de clients présents dans chaque ville.
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                Cette requête permet d’obtenir tous les clients appartenant à un réseau.
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                Cette requête calcule le nombre de clients appartenant à un réseau par ville.
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                Cette requête calcule le nombre de clients isolés par ville.
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                Cette requête calcule le pourcentage de clients rattachés à un réseau par ville.
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Analyse des résultats</h2>
+
+                <p>
+                    Les villes avec une couverture de <strong>100 %</strong> ont l'ensemble de leurs clients appartenant à un réseau partenaire. Les villes comme <strong>Nantes</strong> et
+                    <strong>Toulouse</strong> disposent de réseaux particulièrement performants.
+                </p>
+
+                <p>
+                    Les villes de <strong>Paris</strong> et <strong>Lille</strong> possèdent déjà un réseau actif. Elles constituent les meilleures candidates pour intégrer de nouveaux partenaires et augmenter encore les possibilités de regroupement.
+                </p>
+
+                <p>
+                    Les villes avec une couverture de <strong>0 %</strong> représentent les principaux axes d'amélioration pour réduire les coûts logistiques. Le développement de nouveaux partenariats dans ces villes permettrait d'accroître le potentiel
+                    de livraisons groupées et de limiter le nombre de clients isolés.
+                </p>
+
+            </div>
+        </section>
+    </main>
+</body>
+
 </html>
