@@ -456,6 +456,27 @@ table.etapes {
     border: 1px solid #ffffff;
     border-radius: 4px;
 }
+@media screen and (max-width: 768px) {
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box ;
+    }
+
+    #intro, #intro-image, #img1, #texte1, #texte2, #tab {
+        width: 100% ;
+        max-width: 100% ;
+        margin-left: 0 ;
+        margin-right: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 footer {
     background-color: #BA324F;
