@@ -77,16 +77,25 @@
                 <div class="container-2-colonnes">
                     <section class="requete-indiv">
                         <h2><strong>Proposition d'indicateur pertinent</strong> pour KDou : Combien de produits KDou présente en stock et qui ne sont pas industriels (=produits dans des usines) dont la provenance est naturelle. </h2>
+                        <p>Cette requête a pour but de compter combien de produits éco responsable KDou a en stock. On remarquera que le nombre de produits issu du naturel sont moindre que celui issu des industries. Cela peut aider KDou a favoriser l'achat de produits plus éco-friendly (qui respecte l'environnement) à l'avenir.</p>
                         <p id="SQL">
-                        SELECT COUNT(P.NomProd)AS NbProduitsNaturels<br>
-                        FROM Produit AS P<br>
-                        	INNER JOIN Categorie AS C<br>
+                        <strong>SELECT COUNT</strong>(P.NomProd) AS NbProduitsNaturels<br>
+                        <strong>FROM</strong> Produit AS P<br>
+                        	<strong>INNER JOIN</strong> Categorie AS C<br>
                         	ON P.CodeCateg = C.CodeCateg<br>
-                        WHERE P.UnitStock IS NOT NULL<br>
+                        <strong>WHERE</strong> P.UnitStock IS NOT NULL<br>
                         	AND C.NomCateg IN ('Viandes', 'Poissons et fruits de mer', 'Produits secs');<br>
                         </p>
-                        <p>Cette requête a pour but de compter combien de produits éco responsable KDou a en stock. On remarquera que le nombre de produits issu du naturel sont moindre que celui issu des industries. Cela peut aider KDou a favoriser l'achat de produits plus éco-friendly (qui respecte l'environnement) à l'avenir.</p>
                         <img src="../assets/images/alicia/nbprodnaturels.png" alt="Tableau/résultat du nombre de produits naturels en stock de KDou : 27">
+                        <p id="SQL">
+                        <strong>SELECT COUNT</strong>(P.NomProd) AS NbProduitsIndustriels<br>
+                        <strong>FROM</strong> Produit AS P<br>
+                        	<strong>INNER JOIN</strong> Categorie AS C<br>
+                        	ON P.CodeCateg = C.CodeCateg<br>
+                        <strong>WHERE</strong> P.UnitStock IS NOT NULL<br>
+                        	AND C.NomCateg NOT IN ('Viandes', 'Poissons et fruits de mer', 'Produits secs');<br>
+                        </p>
+                        <img src="../assets/images/alicia/prod-indus.png" alt="Tableau/résultat du nombre de produits industriels en stock de KDou : 79">
                     </section>
                     
                     <section class="requete-f">
