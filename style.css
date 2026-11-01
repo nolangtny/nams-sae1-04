@@ -499,6 +499,25 @@ table.etapes {
     }
 }
 
+.container-2-colonnes {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.requete-indiv,.requete-f {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(46, 125, 50, 0.08);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.requete-indiv img, .requete-f img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+}
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
