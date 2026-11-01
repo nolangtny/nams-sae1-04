@@ -896,6 +896,7 @@ table.etapes {
     gap: 20px;
     margin-top: 30px;
 }
+
 .requete-indiv,.requete-f {
     flex: 1;
     min-width: 300px;
@@ -921,12 +922,11 @@ table.etapes {
     border-radius: 8px;
     background-color: rgba(31, 144, 31, 0.1);
 }
-
-.requete-indiv img {
+.container-2-colonne section img {
     display: flex;
-    justify-content: center;
+    margin: 15px auto;
 }
-
+    
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
