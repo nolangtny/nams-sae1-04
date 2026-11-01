@@ -545,6 +545,10 @@ table.etapes {
         flex-direction: column;
     }
 }
+.requete-indiv SQL{
+    border: solid rgba(46, 125, 50, 1);
+    border-radius: 10px;
+}
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
