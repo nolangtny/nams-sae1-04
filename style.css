@@ -709,10 +709,39 @@ table.etapes {
     border: solid rgba(46, 125, 50, 1);
     border-radius: 10px;
 }
+
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
-    height: 300px;
+    height: 400px;
     padding: 40px;
+}
+
+footer h1 {
+    font-family: "GT Pressura Regular";
+}
+
+footer h1 strong {
+    font-family: "GT Pressura Pro Bold";
+    text-transform: uppercase;
+    color: #3f0b16;
+}
+
+footer p {
+    font-family: "GT Pressura Regular";
+    font-size: 22px;
+    color: #F4F3EE;
+
+}
+
+footer .texte-secondaire {
+    color: #f2a6b6;
+}
+
+footer #logo-uni {
+    width: auto;
+    height: 18px;
+    display: inline;
+    filter: brightness(0.75);
 }
 
