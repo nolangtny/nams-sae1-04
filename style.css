@@ -924,7 +924,8 @@ table.etapes {
 }
 .container-2-colonne section img {
     display: flex;
-    margin: 15px auto;
+    flex-direction: row;
+    align-items: center;
 }
     
 footer {
