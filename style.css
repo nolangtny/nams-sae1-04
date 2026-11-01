@@ -166,9 +166,7 @@ nav ul #logo:hover {
 }
 
 main {
-    padding-left: 16px;
-    padding-top: 20px;
-    margin: 120px 0px 200px 0px;
+    padding: 100px 0px 200px 16px
 }
 
 #main-index {
@@ -179,7 +177,7 @@ main {
     display: grid;
     grid-template-rows: 400px 420px 250px 350px;
     grid-template-columns: 1fr 1fr;
-    gap: 140px 0px;
+    gap: 80px 0px;
 }
 
 @media screen and (max-width: 1420px) {
@@ -205,12 +203,88 @@ main {
     }
 
     #main-index div {
-        width: 600px;
+        width: 1000px;
         align-self: center;
         margin: 0px;
     }
 
+    #main-index #img1, #main-index #intro-image {
+        width: 1040px;
+        height: 585px;
+        justify-self: center;
+    }
+
     #main-index div img {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    header img {
+        width: screen;
+    }
+    
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    #main-index #texte1 {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    #main-index #texte2 {
+        height: auto;
+        margin: 100px 0px 100px 0px;
+    }
+    
+    #main-index div {
+        width: 800px;
+        align-self: center;
+        margin: 0px;
+    }
+
+    #main-index #img1, #main-index #intro-image {
+        width: 840px;
+        height: 473px;
+        justify-self: center;
+    }
+
+    #main-index div img {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header img {
+        width: screen;
+    }
+    
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    #main-index #texte1 {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    #main-index #texte2 {
+        height: auto;
+        margin: 100px 0px 100px 0px;
+    }
+    
+    #main-index div {
         width: 600px;
         align-self: center;
         margin: 0px;
@@ -218,12 +292,53 @@ main {
 
     #main-index #img1, #main-index #intro-image {
         width: 640px;
-        height: auto;
+        height: 360px;
         justify-self: center;
     }
 
     #main-index div img {
-        width: 640px;
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header img {
+        width: screen;
+    }
+    
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    #main-index #texte1 {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    #main-index #texte2 {
+        height: auto;
+        margin: 100px 0px 100px 0px;
+    }
+    
+    #main-index div {
+        width: 500px;
+        align-self: center;
+        margin: 0px;
+    }
+
+    #main-index #img1, #main-index #intro-image {
+        width: 540px;
+        height: 304px;
+        justify-self: center;
+    }
+
+    #main-index div img {
+        width: 100%;
         height: auto;
         justify-self: center;
     }
@@ -265,7 +380,7 @@ main h1 {
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #040F0F;
+    color: #192a21;
 }
 
 main h2 {
@@ -278,7 +393,7 @@ main p {
     font-family: "GT Pressura Regular";
     font-weight: 900;
     font-size: 18px;
-    color: #040F0F;
+    color: #192a21;
 }
 
 main strong {
@@ -287,7 +402,7 @@ main strong {
 }
 
 .texte-secondaire {
-    color: #626260;
+    color: #484d49;
     font-family: "GT Pressura Light";
 }
 
@@ -299,6 +414,7 @@ main strong {
     grid-area: Texte;
     background-color: rgba(73, 146, 73, 0.4);
     padding: 0px 20px 20px 20px;
+    overflow: scroll;
 }
 
 #intro .texte-secondaire strong {
@@ -322,22 +438,22 @@ main strong {
     margin-right: 16px;
     width: auto;
     background-color: rgba(73, 146, 73, 0.4);
-
 }
 
 #texte1 p {
     margin-bottom: 10px;
 }
 
-#texte1 ul {
+#texte1 ul, #intro ul {
     list-style-type: "-  ";
     font-family: "GT Pressura Regular";
     font-size: 18px;
-    color: #040F0F;
-    margin-top: 10px;
+    font-weight: 900;
+    color: #192a21;
+    margin-top: -10px;
 }
 
-#texte1 li {
+#texte1 li, #intro li {
     margin-top: 5px;
 }
 
