@@ -919,11 +919,9 @@ table.etapes {
 .requete-indiv #SQL{
     border: 2px solid rgba(46, 125, 50, 1);
     border-radius: 8px;
+    background-color: rgba(31, 144, 31, 0.1);
 }
-#f-result {
-    margin-right: 0px;
-    margin-left: 10px;
-}
+
 
 footer {
     background-color: #BA324F;
