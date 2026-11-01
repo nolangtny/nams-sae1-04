@@ -191,7 +191,17 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 0px;
+    }
+
+    #main-index #texte1 {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    #main-index #texte2 {
+        height: auto;
+        margin: 100px 0px 100px 0px;
     }
 
     #main-index div {
