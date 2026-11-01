@@ -378,6 +378,144 @@ main {
     }
 }
 
+@media screen and (max-width: 580px) {
+    header img {
+        width: screen;
+    }
+    
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 40px;
+        gap: 0px;
+    }
+
+    #main-index #texte1 {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    #main-index #texte2 {
+        height: auto;
+        margin: 100px 0px 100px 0px;
+    }
+    
+    #main-index div {
+        width: 400px;
+        align-self: center;
+        margin: 0px;
+    }
+
+    #main-index #img1, #main-index #intro-image {
+        width: 440px;
+        height: 304px;
+        justify-self: center;
+    }
+
+    #main-index div img {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li:nth-child(n + 2) {
+        display: none;
+    }
+
+    nav ul #logo {
+        width: 100px !important;
+    }
+
+    nav ul li #icone-menu {
+        display: inline ;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    nav ul:has(#toggle:checked) li:nth-child(n + 2) {
+    display: block;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    header img {
+        width: screen;
+    }
+    
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 40px;
+        gap: 0px;
+    }
+
+    #main-index #texte1 {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    #main-index #texte2 {
+        height: auto;
+        margin: 100px 0px 100px 0px;
+    }
+    
+    #main-index div {
+        width: 350px;
+        align-self: center;
+        margin: 0px;
+    }
+
+    #main-index #img1, #main-index #intro-image {
+        width: 390px;
+        height: 304px;
+        justify-self: center;
+    }
+
+    #main-index div img {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li:nth-child(n + 2) {
+        display: none;
+    }
+
+    nav ul #logo {
+        width: 100px !important;
+    }
+
+    nav ul li #icone-menu {
+        display: inline ;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    nav ul:has(#toggle:checked) li:nth-child(n + 2) {
+    display: block;
+    }
+
+    #titre-accueil {
+        width: 400px !important;
+    }
+}
+
 .main-equipe {
     display: flex;
     flex-direction: column;
@@ -718,7 +856,7 @@ table.etapes {
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
-    height: 400px;
+    height: auto;
     padding: 40px;
 }
 
