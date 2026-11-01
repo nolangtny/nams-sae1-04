@@ -125,13 +125,17 @@ nav a:any-link {
 nav ul #logo {
     margin: 10px 10px 10px 0px;
     padding: 10px;
-    width: 70px;
+    width: 100px;
     text-align: center;
     font-family: "New Kansas";
     text-transform: none;
     font-size: 18px;
     line-height: 24px;
     cursor: default;
+}
+
+nav ul li #icone-menu, #toggle {
+    display: none;
 }
 
 nav ul #logo:hover {
@@ -342,6 +346,31 @@ main {
         width: 100%;
         height: auto;
         justify-self: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li:nth-child(n + 2) {
+        display: none;
+    }
+
+    nav ul #logo {
+        width: 100px !important;
+    }
+
+    nav ul li #icone-menu {
+        display: inline ;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    nav ul:has(#toggle:checked) li:nth-child(n + 2) {
+    display: block;
     }
 }
 
