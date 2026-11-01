@@ -34,27 +34,28 @@
                 <a class="texte-secondaire">Réflexion sur l'origine des produits</a></h2>
             </div>
             <div>
+                <h2>Étapes de la requête</h2>
                 <p>
                     <a id="etape-1">Première étape : FROM</a><br>
                     Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage). J'écris SELECT mais je le garde pour plus tard.<br>
-                    J'ai besoin de DetailCommande pour les quatités et les remises dans mon calcul du CA, de Produit pour le coût d'achat, de Catégorie pour le CoefMarge, et de Fournisseur et Pays pour sélectionner seulement les fournisseurs UE.
+                    J'ai besoin de <a id="etape-1">DetailCommande</a> pour les quatités et les remises dans mon calcul du CA, de <a id="etape-1">Produit</a> pour le coût d'achat, de <a id="etape-1">Categorie</a> pour le CoefMarge, et de <a id="etape-1">Fournisseur</a> et Pays pour sélectionner seulement les fournisseurs UE.<br>
+                    Ma jointure est en INNER JOIN car j'ai besoin de l'intersection de ces tables.
                 </p>
                 <p>
                     <a id="etape-2">Deuxième étape : WHERE</a><br>
-                    Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage).<br>
-                    J'ai besoin de DetailCommande pour les quatités et les remises dans mon calcul du CA, de Produit pour le coût d'achat, de Catégorie pour le CoefMarge, et de Fournisseur et Pays pour sélectionner seulement les fournisseurs UE.
+                    Je viens ici seulement prendre les fournisseurs des pays <a id="etape-2">membres de l'UE</a> grâce à la table Pays qui est reliée à la table Fournisseurs.
                 </p>
                 <p>
                     <a id="etape-3">Troisième étape : SELECT</a><br>
-                    Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage).<br>
-                    J'ai besoin de DetailCommande pour les quatités et les remises dans mon calcul du CA, de Produit pour le coût d'achat, de Catégorie pour le CoefMarge, et de Fournisseur et Pays pour sélectionner seulement les fournisseurs UE.
-                </p>
+                    Enfin j'affiche mon <a id="etape-3">CA par unité</a> (coût achat x coût marge) que je multiplie ensuite par les quatités vendues par fournisseur pour obtenir le <a id="etape-3">CA par fournisseur</a>, puis j'ajoute toutes ces valeurs entre elles pour le <a id="etape-3">CA total</a> (en prenant en compte seulement les fournisseurs UE).<br>
+                    Pour terminer, j'arrondis sinon il y a trop de chiffres non pertinents derrière la virgule.
                 <p>
                     <a id="etape-4">Dernière étape : ORDER BY</a><br>
                     Pas besoin d'order by car le résultat qu'on obtient n'est qu'une seule cellule (deux si on compte l'étiquette de la colonne).
                 </p>
             </div>
             <div>
+                <h2>Ce que ça donne en SQL</h2>
                 <pre>
                     <code>
     SELECT
@@ -81,6 +82,13 @@
     <a>ORDER BY</a>
                     </code>
                 </pre>
+            </div>
+            <div>
+                <h2>Résultats et interprétation</h2>
+                <img src="../assets/images/nolan/nolan-r2.png" alt="Résultat de la requêté 2 : 2 754 529,74 €">
+                <p>
+                    Le résultat obtenu est de <strong>2 754 529,74 €</strong>
+                </p>
             </div>
         </section>
         <section id="nolan-indic">
