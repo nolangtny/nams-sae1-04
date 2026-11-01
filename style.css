@@ -30,17 +30,17 @@ header {
 }
 
 #header-nolan {
-    background-color: #273469;
+    background-color: #57745B;
     height: 202px;
 }
 
 #header-alicia {
-    background-color: #86ba64;
+    background-color: #57745B;
     height: 202px;
 }
 
 #header-serena {
-    background-color: #BA324F;
+    background-color: #57745B;
     height: 202px;
 }
 
@@ -62,35 +62,19 @@ nav {
 }
 
 #header-nolan ul li:nth-child(3) a:any-link {
-    color: #273469;
+    color: #57745B;
 }
 
 #header-alicia ul li:nth-child(4) a:any-link {
-    color: #86ba64;
+    color: #57745B;
 }
 
 #header-serena ul li:nth-child(5) a:any-link {
-    color: #BA324F;
+    color: #57745B;
 }
 
 #header-mahe ul li:nth-child(6) a:any-link {
     color: #57745B;
-}
-
-#header-nolan > nav {
-    border-bottom: 6px solid #273469;
-}
-
-#header-alicia > nav {
-    border-bottom: 6px solid #86ba64;
-}
-
-#header-serena > nav {
-    border-bottom: 6px solid #BA324F;
-}
-
-#header-mahe > nav {
-    border-bottom: 6px solid #57745B;
 }
 
 nav ul {
@@ -439,7 +423,7 @@ table.etapes {
 }
 
 .etapes th {
-    background-color: #86ba64;
+    background-color: #57745B;
     color: white;
     font-weight: bold;
 }
