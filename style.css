@@ -33,9 +33,9 @@ header {
     height: 552px;
     width: 100%;
     background-image: url(assets/images/header.png);
-    background-position: center;
+    background-position: center top 30px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 #header-nolan {
