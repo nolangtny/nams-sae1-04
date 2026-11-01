@@ -922,6 +922,10 @@ table.etapes {
     background-color: rgba(31, 144, 31, 0.1);
 }
 
+.requete-indiv img {
+    display: flex;
+    justify-content: center;
+}
 
 footer {
     background-color: #BA324F;
