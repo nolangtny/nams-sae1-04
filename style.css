@@ -527,6 +527,11 @@ table.etapes {
     margin-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .container-2-colonnes{
+        flex-direction: column;
+    }
+}
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
