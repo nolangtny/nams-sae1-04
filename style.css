@@ -3,6 +3,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+}
+
 *::selection {
   background: #96bc9b;
   color: #F4F3EE;
@@ -24,9 +28,10 @@ html {
 header {
     background-color: #57745B;
     color: #F4F3EE;
-    margin: -16px -8px -8px -8px;
+    margin: -16px 0 0 0;
     padding: 20px 0px;
     height: 552px;
+    width: 100%;
     background-image: url(assets/images/header.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -61,7 +66,7 @@ nav {
     background-color: #F4F3EE;
     color: #040F0F;
     padding-left: 0px;
-    margin: 0px -20px 0px -20px;
+    margin: 0px -20px 0px 0px;
     box-shadow: 0px 0px 20px rgb(4 15 15 / 0.4);
     position: fixed;
     top: 0;
@@ -172,8 +177,8 @@ main {
     "Texte2 Texte2"
     "Tab Tab";
     display: grid;
-    grid-template-rows: 400px 400px 200px 350px;
-    grid-template-columns: 1fr fit-content(696s);
+    grid-template-rows: 400px 420px 250px 350px;
+    grid-template-columns: 1fr 1fr;
     gap: 140px 0px;
 }
 
@@ -286,14 +291,16 @@ main strong {
     height: 400px;
     width: auto;
     object-fit: contain;
-    margin: 0px 20px 0px 0px;
+    margin: 0px;
 }
 
 #texte1 {
     grid-area: Texte1;
     padding: 0px 20px 20px 20px;
-    margin-right: 20px;
+    margin-right: 16px;
+    width: auto;
     background-color: rgba(73, 146, 73, 0.4);
+
 }
 
 #texte1 p {
@@ -317,14 +324,15 @@ main strong {
 }
 
 #img1 img {
-    height: 400px;
-    width: 710px;
+    height: 420px;
+    width: auto;
 }
 
 #texte2 {
     grid-area: Texte2;
     padding-top: 10px;
     text-align: center;
+    width: 800px;
 }
 
 #texte2 a:any-link {
@@ -518,10 +526,11 @@ table.etapes {
     border-radius: 4px;
     margin-top: 10px;
 }
+
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
     height: 300px;
     padding: 40px;
-    margin: 0px -10px -20px -20px;
 }
+
