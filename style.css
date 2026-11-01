@@ -27,6 +27,8 @@ header {
     margin: -16px -8px -8px -8px;
     padding: 20px;
     height: 552px;
+    background-image: url(assets/images/header.png);
+    background-position: center;
 }
 
 #header-nolan {
@@ -125,18 +127,21 @@ nav ul #logo:hover {
     background-color: #F4F3EE;
 }
 
-header img {
-    margin: 20px -20px 0px -20px;
-    height: 552px;
-}
-
 #titre-accueil {
     font-family: 'New Kansas';
     font-weight: 400;
     letter-spacing: 0.2px;
     font-style: normal;
     font-size: 40px;
-    margin-top: -77px;
+    margin-top: 500px;
+}
+
+@media screen and (max-width: 850px) {
+    #titre-accueil {
+    font-size: 40px;
+    margin-top: 450px;
+    width: 500px;
+    }
 }
 
 .titre-equipe {
@@ -163,6 +168,31 @@ main {
     grid-template-rows: 400px 400px 200px 350px;
     grid-template-columns: 1fr fit-content(696s);
     gap: 140px 0px;
+}
+
+@media screen and (max-width: 1420px) {
+    header img {
+        width: screen;
+    }
+    
+    #main-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #main-index div {
+        width: 600px;
+        align-self: center;
+        margin: 0px;
+    }
+
+    #main-index div img {
+        width: 600px;
+        align-self: center;
+        margin: 0px;
+    }
 }
 
 .main-equipe {
