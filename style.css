@@ -602,17 +602,6 @@ main {
     align-items: stretch;
 }
 
-@media screen and (max-width: 1200px) {
-    #nolan-r2 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #nolan-r2 div:nth-child(n + 2) {
-        width: 700px !important;
-    }
-}
-
 #nolan-r2 div:first-child {
     width: 100%;
 }
@@ -639,9 +628,22 @@ main {
     border-radius: 15px;
     padding: 10px 20px;
     justify-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
 }
 
-#nolan-r2 div h2 {
+#nolan-r2 div:nth-child(4) h2 {
+    flex: 1 100%;
+    margin-bottom: 0px;
+}
+
+#nolan-r2 div:nth-child(4) p {
+    width: 45%;
+}
+
+#nolan-r2 div h2, #nolan-indic div h2 {
     font-family: "GT Pressura Pro Bold";
 }
 
@@ -649,8 +651,61 @@ main {
     color: #d5d4cc;
 }
 
+#nolan-r2-resultat {
+    width: 348px;
+    height: 80px;
+    align-self: center;
+}
+
 #nolan-indic {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    margin: 80px 0px 40px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    #nolan-r2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nolan-r2 div:nth-child(n + 2) {
+        width: 700px;
+    }
+
+    #nolan-r2-resultat {
+        height: 60px;
+        width: auto;
+    }
+
+    #nolan-indic div {
+        width: 70%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    #nolan-r2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nolan-r2 div {
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    #nolan-r2 div:nth-child(4) {
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+
+    #nolan-r2 div:nth-child(4) > p {
+        width: 100%;
+    }
 }
 
 main h1 {
