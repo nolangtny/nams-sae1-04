@@ -935,7 +935,7 @@ table.etapes {
     margin-top: 30px;
 }
 
-.requete-indiv,.requete-f {
+.requete-indiv, .requete-f {
     flex: 1;
     min-width: 300px;
     background-color: rgba(46, 125, 50, 0.08);
@@ -955,7 +955,7 @@ table.etapes {
         flex-direction: column;
     }
 }
-.requete-indiv #SQL{
+.requete-indiv #SQL, .requete-f #SQL{
     border: 2px solid rgba(46, 125, 50, 1);
     border-radius: 8px;
     background-color: rgba(31, 144, 31, 0.1);
@@ -964,7 +964,9 @@ table.etapes {
     display: block;
     margin: 0px auto;
 }
-    
+.requete-f h2 {
+    text-decoration: underline;
+}
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
