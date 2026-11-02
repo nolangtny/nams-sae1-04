@@ -998,11 +998,13 @@ table.etapes {
     padding: 20px;
     box-sizing: border-box;
 }
+
 .requete-indiv img, .requete-f img {
     max-width: 100%;
     height: auto;
-    border-radius: 4px;
     margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 768px) {
