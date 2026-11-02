@@ -29,17 +29,100 @@
         <main>
             <section class="main-equipe">
                 <div>
-                    <h1>Titre h1</h1>
-                    <h2>Sous titre h2</h2>
+                    <h1>Conception - Interrogation d'une base de données</h1>
+                    <h2><strong> Requete 4</strong> : Indicateur nombre de produits carnés non commandés actuellement.<br></h2>
+                    <p class="texte-secondaire">Réflexion sur l’offre commerciale</p>
+
                     <p>
-                       Paragraphe p, avec texte <strong>mise en avant avec strong</strong> si besoin.<br>
-                       Ainsi que du :
+                       <strong class="tab-bold"> Pour aider KDou à améliorer son offre commerciale, l'objectif est de chercher combien de produits carnés n’ont jamais été commandés.<br>
+                           Cet indicateur montre à KDou quels produits ne trouvent pas leurs clients, et peuvent donc être mis en avant ou retirés.</strong><br>
                     </p>
-                    <p class="texte-secondaire">
-                        Texte secondaire avec la class texte-secondaire, si besoin.<br>
-                        <strong>Voir code pour la mise en page</strong>
+                    <table class="etapes">
+                    <caption> On cherche le nombre de produits carnés qui n’ont jamais été commandés.
+                        J’ai considéré qu’un produit carné est un produit à base de viande, donc de la catégorie Viandes (on pourrait aussi compter les poissons, mais j’ai préferé garder le sens strict).
+                        Pour cela, j’ai relié les tables Produit et Categorie pour garder seulement les viandes.
+                        Ensuite, j’ai utilisé une sous-requête sur la table DetailCommande, qui contient tous les produits déjà commandés, et j’ai gardé les viandes qui ne sont pas dans cette liste grâce à NOT IN.
+                        Enfin, j’ai utilisé COUNT(*) pour obtenir le nombre. On obtient 2 produits sur 8 : la Terrine Andouilloux et le Paté de Campagne au Pommeau, deux produits français.</caption>
+                    <tr>
+                        <th scope="col"> Libellé des étapes </th>
+                        <th scope="col"> Code SQL </th>
+                        <th scope="col"> Resultat </th>
+                    </tr>
+                    <tr>
+                        <td>1) Liste des produits carnés jamais commandés</td>
+                        <td>
+                            <pre><code>
+            SELECT Produit.RefProd, Produit.NomProd
+            FROM Produit INNER JOIN Categorie
+                 ON Produit.CodeCateg = Categorie.CodeCateg
+            WHERE Categorie.NomCateg LIKE "*viandes*"
+                                            AND Produit.RefProd NOT IN ( SELECT DISTINCT DetailCommande.[Réf produit]
+            FROM DetailCommande )
+            ORDER BY Produit.NomProd;
+                                </code>
+                            </pre>
+                        </td>
+                        <td> <strong> 150 - Paté de Campagne au Pommeau <br>
+                   145 - Terrine Andouilloux </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 2) Nombre de produits carnés jamais commandés </td>
+                        <td>
+                            <pre><code>
+            SELECT COUNT(*) AS NbProduits
+            FROM Produit INNER JOIN Categorie
+                            ON Produit.CodeCateg = Categorie.CodeCateg
+            WHERE Categorie.NomCateg LIKE "*viandes*"
+                            AND Produit.RefProd NOT IN ( SELECT DISTINCT DetailCommande.[Réf produit]
+            FROM DetailCommande );
+                             </code></pre>
+                        </td>
+                        <td> <strong> NbProduits = 2 </strong></td>
+                    </tr>
+                </table>
+                    <p> <strong> Conclusion : </strong> Sur les 8 produits viandes, 2 n’ont jamais été commandés.<br>
+                        Ces produits occupent donc une place dans le catalogue sans rapporter de chiffre d’affaires.
+                        On remarque aussi que ce sont deux spécialités françaises.<br>
+                        KDou pourrait donc soit les mettre davantage en avant auprès de ses clients, soit envisager de les retirer du catalogue.<br>
+                        Cette observation m’a donné l’idée de mon indicateur personnel sur le succès des produits français.<br>
                     </p>
                 </div>
+            </section>
+            <section class="main-equipe">
+                <div>
+                    <h1> Proposition d'indicateur : succès des produits français </h1>
+                    <h2>
+                        <strong> Enoncé de la requete </strong> : Sur les produits français proposés par KDou, combien ont déjà été commandés ?<br>
+                    </h2>
+                    <p> <strong> Objectif </strong>: faire réaliser à KDou si ses produits français ont du succès, et sinon l’inciter à les mettre plus en avant ou les retirer du catalogue.</p>
+                    <p>
+                        <strong> Intérêt dans le contexte : </strong> KDou veut une image éco-responsable. Les produits français effectuent un trajet plus court et permettent donc de minimiser les emissions de CO₂ et valoriser ce qui est local.
+                    </p>
+                    <ul>
+                        <li> liste des produits français (jointure entre Produit,Fournisseur et Pays)</li>
+                        <li> on garde ceux présents dans DetailCommande (avec IN)</li>
+                        <li> on compte avec COUNT(*)</li>
+                    </ul>
+                    <pre><code> <strong> Requete : </strong>
+
+
+                        SELECT COUNT(*) AS NbProduitsFrCommandes
+FROM (Produit INNER JOIN Fournisseur ON Produit.NoFour = Fournisseur.NoFour)
+     INNER JOIN Pays ON Pays.NoPays = Fournisseur.NoPays
+WHERE Pays.PaysFR LIKE "*france*"
+  AND Produit.RefProd IN ( SELECT DISTINCT DetailCommande.[Réf produit]
+                           FROM DetailCommande );
+                    </code></pre>
+                    <p> <strong> Conclusion du résultat :</strong> sur les 11 produits français proposés par KDou, seulement 5 ont déjà été commandés, soit 45 %, alors que 71 % des produits de l’ensemble du catalogue ont été commandés au moins une fois.
+                        Les produits français se vendent donc nettement moins bien que la moyenne.
+                        Pourtant, les produits français connus (vin, fromages, escargots) se vendent bien, ce qui montre que les clients sont intéressés par le local.
+                        KDou devrait donc mieux mettre en avant ses autres produits français, en valorisant leur origine et leur faible impact écologique, ce qui renforcerait aussi son image d’entreprise éco-responsable.
+
+                    </p>
+
+
+                </div>
+
             </section>
         </main>
     </body>
