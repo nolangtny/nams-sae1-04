@@ -72,10 +72,9 @@
                             <strong>N° commande</strong> à <strong>Ncommande</strong>.
                         </td>
                         <td>
-                            <img
-                                src="../assets/images/mahe/NbCommandesClient_r.png"
-                                alt="Requête SQL NbCommandesClient"
-                            />
+                            <strong>SELECT </strong> C.CodeCli, C.Societe, Count(Co.Ncommande) AS NbCommandes<br>
+                        <strong>FROM</strong> Clientele AS C LEFT JOIN Commande AS Co ON C.CodeCli = Co.CodeCli<br>
+                        <strong>GROUP BY</strong> C.CodeCli, C.Societe;<br>
                         </td>
                         <td>
                             <img
@@ -172,7 +171,7 @@
                                         alt="Requête SQL NbClientsVille"
                                     />
                                 </td>
-                                <td>1) Cette requête calcule le nombre total de clients présents dans chaque ville.</td>
+                                <td>Cette requête calcule le nombre total de clients présents dans chaque ville.</td>
                                 <td>
                                     <img
                                         src="../assets/images/mahe/NbClientsVille_tab.png"
