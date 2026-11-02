@@ -37,83 +37,113 @@
         </header>
         <main>
             <section class="main-equipe">
-                <div>
-                    <h1>
-                        Analyse des données : A-t-on des clients pilotes d'un réseau partenaire ayant autant de
-                        commandes que les clients partenaires ?
-                    </h1>
+                <h1>
+                    Analyse des données : A-t-on des clients pilotes d'un réseau partenaire ayant autant de commandes
+                    que les clients partenaires ?
+                </h1>
 
-                    <p>
-                        L'idée est de comparer le volume de commandes du pilote avec celui de son réseau. 
-                        Si un pilote reçoit un nombre similaire de commandes à celui de son réseau alors le pilote a un poids comparable à celui de son réseau.
-                        <br />
-                        Si le pilote reçoit un nombre plus important de commandes que son réseau alors le réseau est concentré sur le pilote et le groupement est intéressant pour la réduction du nombre de
-                        livraison. <br />
-                        Si en revanche les partenaires reçoivent plus de commandes que le pilote, le réseau n'est
-                        peut-être pas intéressant et il faudrait envisager de changer de pilote ou d'organisation.
-                    </p>
+                <p>
+                    L'idée est de comparer le volume de commandes du pilote avec celui de son réseau. Si un pilote
+                    reçoit un nombre similaire de commandes à celui de son réseau alors le pilote a un poids comparable
+                    à celui de son réseau.
+                    <br />
+                    Si le pilote reçoit un nombre plus important de commandes que son réseau alors le réseau est
+                    concentré sur le pilote et le groupement est intéressant pour la réduction du nombre de livraison.
+                    <br />
+                    Si en revanche les partenaires reçoivent plus de commandes que le pilote, le réseau n'est peut-être
+                    pas intéressant et il faudrait envisager de changer de pilote ou d'organisation.
+                </p>
 
-                    <table class="etapes">
-                        <caption>
-                            On cherche, pour chaque pilote, la différence entre le nombre de commandes qu'il a passées
-                            et celles passées par ses partenaires. 
-                        </caption>
-                        <tr>
-                            <th scope="col">Libellé des étapes</th>
-                            <th scope="col">Code SQL</th>
-                            <th scope="col">Resultat</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                On cherche le nombre de commandes par clients. On utilise
-                                <strong>LEFT JOIN</strong> pour avoir aussi les clients n'ayant passé aucune commande.
-                                On modifie aussi le nom de la clé primaire de la table commande de
-                                <strong>N° commande</strong> à <strong>Ncommande</strong>.
-                            </td>
-                            <td><img src="../assets/images/mahe/NbCommandesClient_r.png" alt="Requête SQL NbCommandesClient"></td>
-                            <td><img src="../assets/images/mahe/NbCommandesClient_tab.png" alt="Résultat de la requête SQL NbCommandesClient"></td>
-                        </tr>
-                        <tr>
-                            <td>On cherche la liste de partenaires par pilote.</td>
-                            <td><img src="../assets/images/mahe/PPilotePartenaire_r.png" alt="Requête SQL PPilotePartenaire"></td>
-                            <td><img src="../assets/images/mahe/PPilotePartenaire_tab.png" alt="Résultat de la requête SQL PPilotePartenaire"></td>
-                        </tr>
-                        <tr>
-                            <td>On fait la somme des commandes des partenaires dans chaque réseau.</td>
-                            <td><img src="../assets/images/mahe/NbCommandesPartenaires_r.png" alt="Requête SQL NbCommandesPartenaires"></td>
-                            <td><img src="../assets/images/mahe/NbCommandesPartenaires_tab.png" alt="Résultat de la requête SQL NbCommandesPartenaires"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                On trouve la différence entre le nombre de commandes passées par le pilote et celles
-                                passées par ses partenaires.
-                            </td>
-                            <td><img src="../assets/images/mahe/Requete5_r.png" alt="Requête SQL finale"></td>
-                            <td><img src="../assets/images/mahe/Requete5_tab.png" alt="Résultat de la requête SQL finale"></td>
-                        </tr>
-                    </table>
+                <table class="etapes">
+                    <caption>
+                        On cherche, pour chaque pilote, la différence entre le nombre de commandes qu'il a passées et
+                        celles passées par ses partenaires.
+                    </caption>
+                    <tr>
+                        <th scope="col">Libellé des étapes</th>
+                        <th scope="col">Code SQL</th>
+                        <th scope="col">Resultat</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            On cherche le nombre de commandes par clients. On utilise
+                            <strong>LEFT JOIN</strong> pour avoir aussi les clients n'ayant passé aucune commande. On
+                            modifie aussi le nom de la clé primaire de la table commande de
+                            <strong>N° commande</strong> à <strong>Ncommande</strong>.
+                        </td>
+                        <td>
+                            <img
+                                src="../assets/images/mahe/NbCommandesClient_r.png"
+                                alt="Requête SQL NbCommandesClient"
+                            />
+                        </td>
+                        <td>
+                            <img
+                                src="../assets/images/mahe/NbCommandesClient_tab.png"
+                                alt="Résultat de la requête SQL NbCommandesClient"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>On cherche la liste de partenaires par pilote.</td>
+                        <td>
+                            <img
+                                src="../assets/images/mahe/PPilotePartenaire_r.png"
+                                alt="Requête SQL PPilotePartenaire"
+                            />
+                        </td>
+                        <td>
+                            <img
+                                src="../assets/images/mahe/PPilotePartenaire_tab.png"
+                                alt="Résultat de la requête SQL PPilotePartenaire"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>On fait la somme des commandes des partenaires dans chaque réseau.</td>
+                        <td>
+                            <img
+                                src="../assets/images/mahe/NbCommandesPartenaires_r.png"
+                                alt="Requête SQL NbCommandesPartenaires"
+                            />
+                        </td>
+                        <td>
+                            <img
+                                src="../assets/images/mahe/NbCommandesPartenaires_tab.png"
+                                alt="Résultat de la requête SQL NbCommandesPartenaires"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            On trouve la différence entre le nombre de commandes passées par le pilote et celles passées
+                            par ses partenaires.
+                        </td>
+                        <td><img src="../assets/images/mahe/Requete5_r.png" alt="Requête SQL finale" /></td>
+                        <td>
+                            <img src="../assets/images/mahe/Requete5_tab.png" alt="Résultat de la requête SQL finale" />
+                        </td>
+                    </tr>
+                </table>
 
-                    <h2>Analyse des résultats</h2>
+                <h2>Analyse des résultats</h2>
 
-                    <p>
-                        On voit que les réseaux de la <strong>Crêperie de la gare (GALED)</strong> et de la
-                        <strong>Table nantaise (DRACD)</strong> sont les plus équilibrés. <br />
-                        Le réseau piloté par <strong>Pâtes à succès (FRANS)</strong> est le plus concentré car son
-                        partenaire n'a passé aucune commande. <br />
-                        On peut se demander si <strong>Le Nostradamu (NOSGK)</strong> est le choix le plus judicieux
-                        comme client pilote car son nombre de commandes passées est très inférieur à celui de ses
-                        partenaires.
-                    </p>
+                <p>
+                    On voit que les réseaux de la <strong>Crêperie de la gare (GALED)</strong> et de la
+                    <strong>Table nantaise (DRACD)</strong> sont les plus équilibrés. <br />
+                    Le réseau piloté par <strong>Pâtes à succès (FRANS)</strong> est le plus concentré car son
+                    partenaire n'a passé aucune commande. <br />
+                    On peut se demander si <strong>Le Nostradamu (NOSGK)</strong> est le choix le plus judicieux comme
+                    client pilote car son nombre de commandes passées est très inférieur à celui de ses partenaires.
+                </p>
 
-                    <p class="texte-secondaire">
-                        L'ambiguïté est de savoir si les commandes sont passées par les clients partenaires ou si elles
-                        sont passées par le client pilote pour être ensuite redistribuées. La base de données pourrait
-                        être modifiée pour préciser l'adresse de livraison.
-                    </p>
-                </div>
-            </section>
-            <section class="main-equipe">
-                <div>
+                <p class="texte-secondaire">
+                    L'ambiguïté est de savoir si les commandes sont passées par les clients partenaires ou si elles sont
+                    passées par le client pilote pour être ensuite redistribuées. La base de données pourrait être
+                    modifiée pour préciser l'adresse de livraison.
+                </p>
+
+                <div class="container-2-colonnes">
                     <h1>Proposition d’indicateur : Couverture des villes de France par les réseaux</h1>
 
                     <h2>Énoncé de la requête</h2>
@@ -122,84 +152,114 @@
                         Pour chaque ville, quel est le niveau de couverture du réseau de partenariat client afin
                         d'évaluer dans quelle mesure les livraisons peuvent être regroupées ?
                     </p>
-<section class="requete-indiv">
-                    <h2>Objectif</h2>
+                    <section class="requete-indiv">
+                        <h2>Objectif</h2>
 
-                    <p>Cette requête permet de comparer :</p>
+                        <p>Cette requête permet de comparer :</p>
 
-                    <ul>
-                        <li>le nombre total de clients dans chaque ville ;</li>
-                        <li>le nombre de clients appartenant à un réseau partenaire ;</li>
-                        <li>le nombre de clients isolés (sans partenariat) ;</li>
-                        <li>le pourcentage de couverture du réseau dans la ville.</li>
-                    </ul>
+                        <ul>
+                            <li>le nombre total de clients dans chaque ville ;</li>
+                            <li>le nombre de clients appartenant à un réseau partenaire ;</li>
+                            <li>le nombre de clients isolés (sans partenariat) ;</li>
+                            <li>le pourcentage de couverture du réseau dans la ville.</li>
+                        </ul>
 
-                    <p>
-                        L'objectif final est d'identifier les villes où le partenariat est le plus développé afin de
-                        favoriser les <strong>livraisons groupées</strong> et de repérer les villes où de nombreux
-                        clients restent isolés.
-                    </p>
-</section>
-<section class="requete-indiv">
-                    <h2>Intérêt dans le contexte</h2>
+                        <p>
+                            L'objectif final est d'identifier les villes où le partenariat est le plus développé afin de
+                            favoriser les <strong>livraisons groupées</strong> et de repérer les villes où de nombreux
+                            clients restent isolés.
+                        </p>
+                    </section>
+                    <section class="requete-indiv">
+                        <h2>Intérêt dans le contexte</h2>
 
-                    <p>
-                        KDou utilise les réseaux de partenaires pour optimiser sa logistique. Lorsqu'un client pilote
-                        réceptionne les commandes de plusieurs partenaires, plusieurs livraisons peuvent être
-                        regroupées. Cela réduit les coûts de transport, le nombre de trajets nécessaires et simplifie
-                        l'organisation des tournées de livraison.
-                    </p>
-</section>
-    <section class="requete-indiv">
-                    <h2>Construction de la requête</h2>
+                        <p>
+                            KDou utilise les réseaux de partenaires pour optimiser sa logistique. Lorsqu'un client
+                            pilote réceptionne les commandes de plusieurs partenaires, plusieurs livraisons peuvent être
+                            regroupées. Cela réduit les coûts de transport, le nombre de trajets nécessaires et
+                            simplifie l'organisation des tournées de livraison.
+                        </p>
+                    </section>
+                    <section class="requete-indiv">
+                        <h2>Construction de la requête</h2>
 
-                    <table class="etapes">
-                        <caption>
-                            On étudie la répartition des clients par ville et par réseau : nombre total de clients par
-                            ville, liste des clients appartenant à un réseau, puis pourcentage de clients rattachés à un
-                            réseau par ville.
-                        </caption>
-                        <tr>
-                            <th scope="col">Requête</th>
-                            <th scope="col">Fonction</th>
-                            <th scope="col">Resultat</th>
-                        </tr>
-                        <tr>
-                            <td><img src="../assets/images/mahe/NbClientsVille_r.png" alt="Requête SQL NbClientsVille"></td>
-                            <td>1) Cette requête calcule le nombre total de clients présents dans chaque ville.</td>
-                            <td><img src="../assets/images/mahe/NbClientsVille_tab.png" alt="Résultat de la requête SQL NbClientsVille"></td>
-                        </tr>
-                        <tr>
-                            <td><img src="../assets/images/mahe/NbReseauVille_r.png" alt="Requête SQL NbReseauVille"></td>
-                            <td> Cette requête permet d'obtenir tous les clients appartenant à un réseau.</td>
-                            <td><img src="../assets/images/mahe/NbReseauVille_tad.png" alt="Résultat de la requête SQL NbReseauVille"></td>
-                        </tr>
-                        <tr>
-                            <td><img src="../assets/images/mahe/Indicateur_r.png" alt="Requête SQL Indicateur"></td>
-                            <td> Cette requête calcule le pourcentage de clients rattachés à un réseau par ville.</td>
-                            <td><img src="../assets/images/mahe/Indicateur_tab.png" alt="Résultat de la requête SQL Indicateur"></td>
-                        </tr>
-                    </table>
-</section>
-    <section class="requete-indiv">
-                    <h2>Analyse des résultats</h2>
+                        <table class="etapes">
+                            <caption>
+                                On étudie la répartition des clients par ville et par réseau : nombre total de clients
+                                par ville, liste des clients appartenant à un réseau, puis pourcentage de clients
+                                rattachés à un réseau par ville.
+                            </caption>
+                            <tr>
+                                <th scope="col">Requête</th>
+                                <th scope="col">Fonction</th>
+                                <th scope="col">Resultat</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="../assets/images/mahe/NbClientsVille_r.png"
+                                        alt="Requête SQL NbClientsVille"
+                                    />
+                                </td>
+                                <td>1) Cette requête calcule le nombre total de clients présents dans chaque ville.</td>
+                                <td>
+                                    <img
+                                        src="../assets/images/mahe/NbClientsVille_tab.png"
+                                        alt="Résultat de la requête SQL NbClientsVille"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="../assets/images/mahe/NbReseauVille_r.png"
+                                        alt="Requête SQL NbReseauVille"
+                                    />
+                                </td>
+                                <td>Cette requête permet d'obtenir tous les clients appartenant à un réseau.</td>
+                                <td>
+                                    <img
+                                        src="../assets/images/mahe/NbReseauVille_tad.png"
+                                        alt="Résultat de la requête SQL NbReseauVille"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/mahe/Indicateur_r.png" alt="Requête SQL Indicateur" />
+                                </td>
+                                <td>
+                                    Cette requête calcule le pourcentage de clients rattachés à un réseau par ville.
+                                </td>
+                                <td>
+                                    <img
+                                        src="../assets/images/mahe/Indicateur_tab.png"
+                                        alt="Résultat de la requête SQL Indicateur"
+                                    />
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="requete-indiv">
+                        <h2>Analyse des résultats</h2>
 
-                    <p>
-                        Les villes avec une couverture de <strong>100 %</strong> ont l'ensemble de leurs clients
-                        appartenant à un réseau partenaire. Les villes comme <strong>Nantes</strong> et
-                        <strong>Toulouse</strong> disposent de réseaux particulièrement performants par exemple.
-                    </p>
+                        <p>
+                            Les villes avec une couverture de <strong>100 %</strong> ont l'ensemble de leurs clients
+                            appartenant à un réseau partenaire. Les villes comme <strong>Nantes</strong> et
+                            <strong>Toulouse</strong> disposent de réseaux particulièrement performants par exemple.
+                        </p>
 
-                    <p>
-                        Les villes de <strong>Paris</strong> et <strong>Lille</strong> ont un réseau actif. Elles sont
-                        les meilleures candidates pour intégrer de nouveaux partenaires et augmenter encore les
-                        possibilités de regroupement.
-                    </p>
+                        <p>
+                            Les villes de <strong>Paris</strong> et <strong>Lille</strong> ont un réseau actif. Elles
+                            sont les meilleures candidates pour intégrer de nouveaux partenaires et augmenter encore les
+                            possibilités de regroupement.
+                        </p>
 
-                    <p>
-                        Les villes avec une couverture de <strong>0 %</strong> représentent les principaux axes
-                        d'amélioration pour réduire les coûts logistiques.
-                    </p>
+                        <p>
+                            Les villes avec une couverture de <strong>0 %</strong> représentent les principaux axes
+                            d'amélioration pour réduire les coûts logistiques.
+                        </p>
+                    </section>
                 </div>
             </section>
         </main>
