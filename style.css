@@ -1017,13 +1017,16 @@ table.etapes {
     border-radius: 8px;
     background-color: rgba(31, 144, 31, 0.1);
 }
+
 .container-2-colonnes section img {
     display: block;
     margin: 0px auto;
 }
+
 .main-equipe h2, .requete-indiv h2, .requete-f h2, {
     text-decoration: underline;
 }
+
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
@@ -1045,7 +1048,6 @@ footer p {
     font-family: "GT Pressura Regular";
     font-size: 22px;
     color: #F4F3EE;
-
 }
 
 footer .texte-secondaire {
