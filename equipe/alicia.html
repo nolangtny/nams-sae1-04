@@ -35,10 +35,10 @@
                 </h2>
                 <section class="requete3">
                     <table class="etapes">
-                        <caption> Par année, on affiche le CA total des boissons, le CA total des desserts et le total de ces deux ci. Les années vont de 2020 à 2022.<br>
+                        <caption> Par année, on affiche le CA total des boissons, le CA total des desserts et enfin le CA total de ces 3 dernières années que ce soit pour les desserts ou boissons. Les années vont de 2020 à 2022.<br>
                             <strong>On obtient le CA en multipliant le coût d'achat d'un produit avec la quantité vendue.</strong>
                             Pour cela, j'ai relié les 3 tables Produit, Categorie et DetailCommande pour pouvoir afficher le nom des catégories boissons et desserts, le CA = produit du coût d'achat des produits par le nombre de quantités vendu pour une année précise.
-                            J'y ai trié par année, et catégorie (croissant). J'ai trouvé pertinent d'afficher le CA par les 2 catégories demandées au lieu de les additionner entre eux.</caption>
+                            J'y ai trié par année, et catégorie (croissant). J'ai trouvé pertinent d'afficher le CA des 2 catégories demandées au lieu de les additionner directement entre eux.</caption>
                         <tr>
                             <th scope="col"> Libellé des étapes </th>
                             <th scope="col"> Code SQL </th>
@@ -76,7 +76,7 @@
                 </section>
                 <div class="container-2-colonnes">
                     <section class="requete-indiv">
-                        <h2><strong>Proposition d'indicateur pertinent</strong> pour KDou : Combien de produits KDou présente en stock et qui ne sont pas industriels (=produits dans des usines) dont la provenance est naturelle. </h2>
+                        <h2><strong>Proposition d'indicateur pertinent</strong> pour KDou : Combien de produits KDou présente-t-elle en stock et qui ne sont pas industriels (=produits dans des usines) dont la provenance est naturelle. </h2>
                         <p>Cette requête a pour but de compter combien de produits éco responsable KDou a en stock. On remarquera que le nombre de produits issu du naturel sont moindre que celui issu des industries. Cela peut aider KDou a favoriser l'achat de produits plus éco-friendly (qui respecte l'environnement) à l'avenir.</p>
                         <p id="SQL">
                         <strong>SELECT COUNT</strong>(P.NomProd) AS NbProduitsNaturels<br>
@@ -102,7 +102,13 @@
                         <h2>f. Quels sont les produits conditionnés dans du carton ou dans du verre ?</h2>
                         <p>Je fais attention au nom des attributs sur la feuille Access qui n'est pas forcément référencié<br> en tant que tel dans les relations. Le champ 'Quantité Par Unité' dans la table Produit laisse voir<br> dans quels type d'emballages les produits sont conditionnés. Il n'y a pas de doublons possible pour cette requête.</p>
                         <img id="f-resultat" src="../assets/images/alicia/f-result.png" alt="Tableau/resultat de la requête SQL 1. f sur Access">
-                        <img id= "f-sql" src="../assets/images/alicia/f-SQL.png" alt="Requête SQL 1) f.">
+                        <p id="SQL">
+                        <strong>SELECT </strong> P.NomProd, P.QteParUnit<br>
+                        <strong>FROM</strong> Produit AS P<br>
+                        <strong>WHERE</strong> P.QteParUnit LIKE '*carton*'    <br>
+                        	OR P.QteParUnit LIKE '*bouteille*'<br>
+                            ORDER BY 1;<br>
+                        </p>
                     </section>
                 </div>
             </section>
