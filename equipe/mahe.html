@@ -36,50 +36,46 @@
                     <br> Si en revanche les partenaires reçoivent plus de commandes que le pilote, le réseau n'est peut-être pas intéressant et il faudrait envisager de changer de pilote ou d'organisation.
                 </p>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Étapes</th>
-                            <th>Code SQL</th>
-                            <th>Résultat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                On cherche le nombre de commandes par clients.
-                                <br> On utilise LEFT JOIN pour avoir aussi les clients n'ayant passé aucune commande.
-                                <br> On modifie aussi le nom de la clé primaire de la table commande de N° commande à Ncommande.
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                On cherche la liste de partenaires par pilote.
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                On fait la somme des commandes des partenaires dans chaque réseau.
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                On trouve la différence entre le nombre de commandes passées par le pilote et celles passées par ses partenaires.
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+<table class="etapes">
+    <caption>
+        On cherche, pour chaque pilote, la différence entre le nombre de commandes qu'il a passées
+        et celles passées par ses partenaires. Pour cela, on compte d'abord les commandes par client
+        (en incluant ceux n'ayant passé aucune commande grâce à un LEFT JOIN),
+        puis on liste les partenaires de chaque pilote, on somme leurs commandes par réseau,
+        et enfin on calcule l'écart entre le pilote et ses partenaires.
+    </caption>
+    <tr>
+        <th scope="col"> Libellé des étapes </th>
+        <th scope="col"> Code SQL </th>
+        <th scope="col"> Resultat </th>
+    </tr>
+    <tr>
+        <td> 1) On cherche le nombre de commandes par clients.
+            On utilise <strong>LEFT JOIN</strong> pour avoir aussi les clients n'ayant passé aucune commande.
+            On modifie aussi le nom de la clé primaire de la table commande de
+            <strong>N° commande</strong> à <strong>Ncommande</strong>.
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 2) On cherche la liste de partenaires par pilote. </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 3) On fait la somme des commandes des partenaires dans chaque réseau. </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 4) On trouve la différence entre le nombre de commandes passées par le pilote
+            et celles passées par ses partenaires.
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
                 <h2>Analyse des résultats</h2>
 
@@ -133,41 +129,34 @@
 
                 <h2>Construction de la requête</h2>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Requête</th>
-                            <th>Fonction</th>
-                            <th>Résultat</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td>
-                                Cette requête calcule le nombre total de clients présents dans chaque ville.
-                            </td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td>
-                                Cette requête permet d’obtenir tous les clients appartenant à un réseau.
-                            </td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td>
-                                Cette requête calcule Pourcentage de clients rattachés à un réseau par ville
-                            </td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+<table class="etapes">
+    <caption>
+        On étudie la répartition des clients par ville et par réseau :
+        nombre total de clients par ville, liste des clients appartenant à un réseau,
+        puis pourcentage de clients rattachés à un réseau par ville.
+    </caption>
+    <tr>
+        <th scope="col"> Requête </th>
+        <th scope="col"> Fonction </th>
+        <th scope="col"> Resultat </th>
+    </tr>
+    <tr>
+        <td></td>
+        <td> 1) Cette requête calcule le nombre total de clients présents dans chaque ville. </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td> 2) Cette requête permet d'obtenir tous les clients appartenant à un réseau. </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td> 3) Cette requête calcule le pourcentage de clients rattachés à un réseau par ville. </td>
+        <td></td>
+    </tr>
+</table>
 
                 <h2>Analyse des résultats</h2>
 
