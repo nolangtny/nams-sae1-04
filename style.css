@@ -1019,7 +1019,7 @@ table.etapes {
     display: block;
     margin: 0px auto;
 }
-.requete-f h2 {
+.main-equipe h2, .requete-indiv h2, .requete-f h2, {
     text-decoration: underline;
 }
 footer {
