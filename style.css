@@ -745,10 +745,7 @@ main:has(#nolan-r2) {
 @media screen and (max-width: 790px) {
     #nolan-r2 {
         flex-direction: column;
-    }
-
-    #nolan-r2 div {
-        width: 70% !important;
+        justify-content: flex-start;
     }
 }
 
@@ -756,10 +753,6 @@ main:has(#nolan-r2) {
     #nolan-r2 div:nth-child(4) {
     flex-direction: column;
     justify-content: flex-start;
-    }
-
-    #nolan-r2 div:nth-child(4) > p {
-        width: 100%;
     }
 }
 
