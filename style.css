@@ -659,18 +659,17 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding-right: 10px;
     align-items: stretch;
 }
 
 #nolan-r2 div:nth-child(2) {
-    width: 45%;
     background-color: #bddac1;
     padding: 10px 20px;
     border-radius: 15px;
 }
 
 #nolan-r2 div:nth-child(3) {
-    width: 45%;
     background-color: #242626;
     overflow: scroll;
     border-radius: 15px;
@@ -679,7 +678,6 @@ main {
 }
 
 #nolan-r2 div:nth-child(4) {
-    width: 94%;
     background-color: #e7b0b0;
     border-radius: 15px;
     padding: 10px 20px;
@@ -690,13 +688,15 @@ main {
     gap: 20px;
 }
 
+#nolan-r2 div:nth-child(3),
+#nolan-r2 div:nth-child(4) {
+    flex: 1;
+    min-width: 0;
+}
+
 #nolan-r2 div:nth-child(4) h2 {
     flex: 1 100%;
     margin-bottom: 0px;
-}
-
-#nolan-r2 div:nth-child(4) p {
-    width: 45%;
 }
 
 #nolan-r2 div h2, #nolan-indic div h2 {
@@ -731,18 +731,14 @@ main:has(#nolan-r2) {
         align-items: flex-start;
     }
 
-    #nolan-r2 div:nth-child(n + 2) {
-        width: 700px;
+    #nolan-r2 div:nth-child(3) {
+        align-self: center;
+        flex: none;
     }
 
     #nolan-r2-resultat {
         height: 60px;
         width: auto;
-    }
-
-    #nolan-indic div {
-        width: 70%;
-        align-self: center;
     }
 }
 
