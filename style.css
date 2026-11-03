@@ -1096,10 +1096,6 @@ table.etapes {
     margin: 0px auto;
 }
 
-.main-equipe h2, .requete-indiv h2, .requete-f h2 {
-    text-decoration: underline;
-}
-
 footer {
     background-color: #BA324F;
     color: #F4F3EE;
