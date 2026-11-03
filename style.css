@@ -662,10 +662,6 @@ main {
     align-items: stretch;
 }
 
-#nolan-r2 div:first-child {
-    width: 100%;
-}
-
 #nolan-r2 div:nth-child(2) {
     width: 45%;
     background-color: #bddac1;
