@@ -100,7 +100,8 @@
                     
                     <section class="requete-f">
                         <h2>f. Quels sont les produits conditionnés dans du carton ou dans du verre ?</h2>
-                        <p>Je fais attention au nom des attributs sur la feuille Access qui n'est pas forcément référencié<br> en tant que tel dans les relations. Le champ 'Quantité Par Unité' dans la table Produit laisse voir<br> dans quels type d'emballages les produits sont conditionnés. Il n'y a pas de doublons possible pour cette requête.</p>
+                        <p>Pour cette requête, on admet que les bouteilles sont en verres. Je fais attention au nom des attributs sur la feuille Access qui n'est pas forcément référencié en tant que tel dans les relations.<br> Le champ 'Quantité Par Unité' dans la table Produit laisse voir<br> dans quels type d'emballages les produits sont conditionnés. Il n'y a pas de doublons possible pour cette requête.<br>
+                        Il y a en tout <strong> 40 produits conditionnés dans du carton ou dans du verre</strong></p>
                         <p id="SQL">
                         <strong>SELECT </strong> P.NomProd, P.QteParUnit<br>
                         <strong>FROM</strong> Produit AS P<br>
