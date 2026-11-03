@@ -196,6 +196,16 @@ main {
     overflow: scroll;
 }
 
+.main-serena p:has(+ ul) {
+    margin-bottom: 0px;
+}
+
+.main-serena ul {
+    margin-top: 10px;
+    font-family: "GT Pressura Regular";
+    list-style: "- ";
+}
+
 .main-serena pre {
     overflow: scroll;
     background-color: #96bc9b;
