@@ -707,6 +707,10 @@ main {
     color: #d5d4cc;
 }
 
+#nolan-r2 div:nth-child(3) {
+    min-width: 0;
+}
+
 #nolan-r2-resultat {
     width: 348px;
     height: 80px;
@@ -753,6 +757,28 @@ main:has(#nolan-r2) {
     #nolan-r2 div:nth-child(4) {
     flex-direction: column;
     justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #nolan-r2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #nolan-r2 div:nth-child(3) {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: auto;
+    }
+
+    #nolan-r2 div:nth-child(3) pre {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: auto;
     }
 }
 
@@ -994,7 +1020,7 @@ table.etapes {
 
 .etapes th {
     background-color: #57745B;
-    color: white;
+    color: #F4F3EE;
     font-weight: bold;
 }
 
@@ -1070,7 +1096,7 @@ table.etapes {
     margin: 0px auto;
 }
 
-.main-equipe h2, .requete-indiv h2, .requete-f h2, {
+.main-equipe h2, .requete-indiv h2, .requete-f h2 {
     text-decoration: underline;
 }
 
