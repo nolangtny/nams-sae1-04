@@ -27,7 +27,7 @@
             <h1 class="titre-equipe">Serena</h1>
         </header>
         <main>
-            <section class="main-equipe">
+            <section class="main-serena">
                 <div>
                     <h1>Conception - Interrogation d'une base de données</h1>
                     <h2><strong> Requete 4</strong> : Indicateur nombre de produits carnés non commandés actuellement.<br></h2>
@@ -37,6 +37,8 @@
                        <strong class="tab-bold"> Pour aider KDou à améliorer son offre commerciale, l'objectif est de chercher combien de produits carnés n'ont jamais été commandés.<br>
                            Cet indicateur montre à KDou quels produits ne trouvent pas leurs clients, et peuvent donc être mis en avant ou retirés.</strong><br>
                     </p>
+                </div>
+                <div>
                     <table class="etapes">
                     <caption> On cherche le nombre de produits carnés qui n'ont jamais été commandés.
                         J'ai considéré qu'un produit carné est un produit à base de viande, donc de la catégorie Viandes (on pourrait aussi compter les poissons, mais j'ai préferé garder le sens strict).
@@ -80,6 +82,8 @@
                         <td> <strong> NbProduits = 2 </strong></td>
                     </tr>
                 </table>
+                </div>
+                <div>
                     <p> <strong> Conclusion : </strong> Sur les 8 produits viandes, 2 n'ont jamais été commandés.<br>
                         Ces produits occupent donc une place dans le catalogue sans rapporter de chiffre d'affaires.
                         On remarque aussi que ce sont deux spécialités françaises.<br>
@@ -88,7 +92,7 @@
                     </p>
                 </div>
             </section>
-            <section class="main-equipe">
+            <section class="main-serena">
                 <div>
                     <h1> Proposition d'indicateur : succès des produits français </h1>
                     <h2>
@@ -103,10 +107,9 @@
                         <li> on garde ceux présents dans DetailCommande (avec IN)</li>
                         <li> on compte avec COUNT(*)</li>
                     </ul>
-                    <pre><code> <strong> Requete : </strong>
-
-
-                        SELECT COUNT(*) AS NbProduitsFrCommandes
+                    <strong> Requête : </strong>
+                    <pre><code>
+SELECT COUNT(*) AS NbProduitsFrCommandes
 FROM (Produit INNER JOIN Fournisseur ON Produit.NoFour = Fournisseur.NoFour)
      INNER JOIN Pays ON Pays.NoPays = Fournisseur.NoPays
 WHERE Pays.PaysFR LIKE "*france*"
