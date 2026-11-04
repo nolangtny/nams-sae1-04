@@ -655,7 +655,7 @@ main {
     flex-direction: column;
 }
 
-#nolan-r2, #nolan-indic {
+#nolan-r2, #nolan-indic div {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
