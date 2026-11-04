@@ -156,8 +156,7 @@
                 <h2>Énoncé de la requête</h2>
 
                 <p>
-                    Pour chaque ville, quel est le niveau de couverture du réseau de partenariat client afin d'évaluer
-                    dans quelle mesure les livraisons peuvent être regroupées ?
+                    Quel est le niveau de couverture par réseau de partenariat pour chaque ville ?
                 </p>
 
                 <h2>Construction de la requête</h2>
@@ -210,14 +209,14 @@
                         <td>
                             <strong>SELECT</strong> V.Ville, V.NbClients,<br />
                             Nz(R.NbReseau,0) AS NbReseau,<br />
-                            V.NbClients-Nz(R.NbReseau,0) AS NbIsoles,<br />
-                            Round((Nz(R.NbReseau,0)*100)/V.NbClients,2) AS TauxCouverture<br />
+                            V.NbClients - Nz(R.NbReseau,0) AS NbIsoles,<br />
+                            (Nz(R.NbReseau,0)*100)/V.NbClients AS TauxCouverture<br />
                             <strong>FROM</strong> NbClientsVille AS V<br />
                             <strong>LEFT JOIN</strong> NbReseauVille AS R<br />
                             <strong>ON</strong> V.Ville = R.Ville<br />
-                            <strong>ORDER BY</strong> Round((Nz(R.NbReseau,0)*100)/V.NbClients,2);<br />
+                            <strong>ORDER BY</strong> (Nz(R.NbReseau,0)*100)/V.NbClients;<br />
                         </td>
-                        <td>Cette requête calcule le pourcentage de clients rattachés à un réseau par ville.</td>
+                        <td>Cette requête calcule le pourcentage de clients rattachés à un réseau par ville. On utilise Nz() pour remplacer les valeurs Null par des 0.</td>
                         <td>
                             <img
                                 src="../assets/images/mahe/Indicateur_tab.png"
@@ -261,7 +260,7 @@
                         <p>
                             Les villes avec une couverture de <strong>100 %</strong> ont l'ensemble de leurs clients
                             appartenant à un réseau partenaire. Les villes comme <strong>Nantes</strong> et
-                            <strong>Toulouse</strong> disposent de réseaux particulièrement performants par exemple.
+                            <strong>Toulouse</strong> disposent de réseaux particulièremen performants par exemple.
                         </p>
 
                         <p>
