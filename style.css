@@ -198,11 +198,11 @@ main {
     overflow: scroll;
 }
 
-.main-serena p:has(+ ul) {
+.main-serena p:has(+ ul), .requete-indiv p:has(+ ul) {
     margin-bottom: 0px;
 }
 
-.main-serena ul {
+.main-serena ul, .requete-indiv ul {
     margin-top: 10px;
     font-family: "GT Pressura Regular";
     list-style: "- ";
