@@ -164,72 +164,72 @@
                 </p>
 
                 <h2>Construction de la requête</h2>
-
-                <table class="etapes">
-                    <caption>
-                        On étudie la répartition des clients par ville et par réseau : nombre total de clients par
-                        ville, liste des clients appartenant à un réseau, puis pourcentage de clients rattachés à un
-                        réseau par ville.
-                    </caption>
-                    <tr>
-                        <th scope="col">Requête</th>
-                        <th scope="col">Fonction</th>
-                        <th scope="col">Resultat</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>SELECT</strong> Ville, Count(*) AS NbClients<br />
-                            <strong>FROM</strong> Clientele<br />
-                            <strong>GROUP BY</strong> Ville;<br />
-                        </td>
-                        <td>Cette requête calcule le nombre total de clients présents dans chaque ville.</td>
-                        <td>
-                            <img
-                                src="../assets/images/mahe/NbClientsVille_tab.png"
-                                alt="Résultat de la requête SQL NbClientsVille"
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>SELECT</strong> Ville, Count(*) AS NbReseau<br />
-                            <strong>FROM</strong> Clientele<br />
-                            <strong>WHERE</strong> CodeCliPart Is Not Null<br />
-                            OR CodeCli IN<br />
-                            (SELECT CodeCliPart<br />
-                            <strong>FROM</strong> Clientele<br />
-                            <strong>WHERE</strong> CodeCliPart Is Not Null)<br />
-                            <strong>GROUP BY</strong> Ville;<br />
-                        </td>
-                        <td>Cette requête permet d'obtenir tous les clients appartenant à un réseau.</td>
-                        <td>
-                            <img
-                                src="../assets/images/mahe/NbReseauVille_tad.png"
-                                alt="Résultat de la requête SQL NbReseauVille"
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>SELECT</strong> V.Ville, V.NbClients,<br />
-                            Nz(R.NbReseau,0) AS NbReseau,<br />
-                            V.NbClients - Nz(R.NbReseau,0) AS NbIsoles,<br />
-                            (Nz(R.NbReseau,0)*100)/V.NbClients AS TauxCouverture<br />
-                            <strong>FROM</strong> NbClientsVille AS V<br />
-                            <strong>LEFT JOIN</strong> NbReseauVille AS R<br />
-                            <strong>ON</strong> V.Ville = R.Ville<br />
-                            <strong>ORDER BY</strong> (Nz(R.NbReseau,0)*100)/V.NbClients;<br />
-                        </td>
-                        <td>Cette requête calcule le pourcentage de clients rattachés à un réseau par ville. On utilise Nz() pour remplacer les valeurs Null par des 0.</td>
-                        <td>
-                            <img
-                                src="../assets/images/mahe/Indicateur_tab.png"
-                                alt="Résultat de la requête SQL Indicateur"
-                            />
-                        </td>
-                    </tr>
-                </table>
-
+                <div id="tab-mahe">
+                    <table class="etapes">
+                        <caption>
+                            On étudie la répartition des clients par ville et par réseau : nombre total de clients par
+                            ville, liste des clients appartenant à un réseau, puis pourcentage de clients rattachés à un
+                            réseau par ville.
+                        </caption>
+                        <tr>
+                            <th scope="col">Requête</th>
+                            <th scope="col">Fonction</th>
+                            <th scope="col">Resultat</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>SELECT</strong> Ville, Count(*) AS NbClients<br />
+                                <strong>FROM</strong> Clientele<br />
+                                <strong>GROUP BY</strong> Ville;<br />
+                            </td>
+                            <td>Cette requête calcule le nombre total de clients présents dans chaque ville.</td>
+                            <td>
+                                <img
+                                    src="../assets/images/mahe/NbClientsVille_tab.png"
+                                    alt="Résultat de la requête SQL NbClientsVille"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>SELECT</strong> Ville, Count(*) AS NbReseau<br />
+                                <strong>FROM</strong> Clientele<br />
+                                <strong>WHERE</strong> CodeCliPart Is Not Null<br />
+                                OR CodeCli IN<br />
+                                (SELECT CodeCliPart<br />
+                                <strong>FROM</strong> Clientele<br />
+                                <strong>WHERE</strong> CodeCliPart Is Not Null)<br />
+                                <strong>GROUP BY</strong> Ville;<br />
+                            </td>
+                            <td>Cette requête permet d'obtenir tous les clients appartenant à un réseau.</td>
+                            <td>
+                                <img
+                                    src="../assets/images/mahe/NbReseauVille_tad.png"
+                                    alt="Résultat de la requête SQL NbReseauVille"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>SELECT</strong> V.Ville, V.NbClients,<br />
+                                Nz(R.NbReseau,0) AS NbReseau,<br />
+                                V.NbClients - Nz(R.NbReseau,0) AS NbIsoles,<br />
+                                (Nz(R.NbReseau,0)*100)/V.NbClients AS TauxCouverture<br />
+                                <strong>FROM</strong> NbClientsVille AS V<br />
+                                <strong>LEFT JOIN</strong> NbReseauVille AS R<br />
+                                <strong>ON</strong> V.Ville = R.Ville<br />
+                                <strong>ORDER BY</strong> (Nz(R.NbReseau,0)*100)/V.NbClients;<br />
+                            </td>
+                            <td>Cette requête calcule le pourcentage de clients rattachés à un réseau par ville. On utilise Nz() pour remplacer les valeurs Null par des 0.</td>
+                            <td>
+                                <img
+                                    src="../assets/images/mahe/Indicateur_tab.png"
+                                    alt="Résultat de la requête SQL Indicateur"
+                                />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="container-2-colonnes">
                     <section class="requete-indiv">
                         <h2>Objectif</h2>

@@ -995,6 +995,10 @@ section.requete3 {
     overflow: scroll;
 }
 
+#tab-mahe {
+    overflow: scroll;
+}
+
 table.etapes {
     font-family: "GT Pressura Regular";
 }
