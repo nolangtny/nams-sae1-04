@@ -665,7 +665,7 @@ main {
 }
 
 #nolan-r2 div:nth-child(2) {
-    background-color: #bddac1;
+    background-color: #d1dfd2;
     padding: 10px 20px;
     border-radius: 15px;
 }
@@ -680,7 +680,7 @@ main {
 }
 
 #nolan-r2 div:nth-child(4) {
-    background-color: #e7b0b0;
+    background-color: #d1dfd2;
     border-radius: 15px;
     padding: 10px 20px;
     justify-self: flex-start;
