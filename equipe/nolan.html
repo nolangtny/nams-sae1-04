@@ -28,10 +28,10 @@
             <h1 class="titre-equipe">Nolan</h1>
         </header>
         <main>
-        <section id="nolan-r2">
+        <section class="nolan-r2">
             <div>
                 <h1>Conception - Interrogation d'une base de données</h1>
-                <h2><strong>Requête 2</strong> <strong class="tab-bold">CA total</strong> généré, à ce jour, avec les fournisseurs de l'UE.<br>
+                <h2><strong>Requête 2</strong> <strong class="tab-bold">CA total généré, à ce jour, avec les fournisseurs de l'UE.</strong> <br>
                 <a class="texte-secondaire">Réflexion sur l'origine des produits</a></h2>
             </div>
             <div>
@@ -39,7 +39,7 @@
                 <p>
                     <a id="etape-1">Première étape : FROM</a><br>
                     Je commence par sélection les tables qui contiennent des informations qui vont me servir (soit dans ma sélection, soit dans mon affichage). J'écris SELECT mais je le garde pour plus tard.<br>
-                    J'ai besoin de <a id="etape-1">DetailCommande</a> pour les quatités et les remises dans mon calcul du CA, de <a id="etape-1">Produit</a> pour le coût d'achat, de <a id="etape-1">Categorie</a> pour le CoefMarge, et de <a id="etape-1">Fournisseur</a> et Pays pour sélectionner seulement les fournisseurs UE.<br>
+                    J'ai besoin de <a id="etape-1">DetailCommande</a> pour les quatités et les remises dans mon calcul du CA, de <a id="etape-1">Produit</a> pour le coût d'achat, de <a id="etape-1">Categorie</a> pour le CoefMarge, et de <a id="etape-1">Fournisseur</a> et <a id="etape-1">Pays</a> pour sélectionner seulement les fournisseurs UE.<br>
                     Ma jointure est en INNER JOIN car j'ai besoin de l'intersection de ces tables.
                 </p>
                 <p>
@@ -52,7 +52,7 @@
                     Pour terminer, j'arrondis sinon il y a trop de chiffres non pertinents derrière la virgule.
                 <p>
                     <a id="etape-4">Dernière étape : ORDER BY</a><br>
-                    Pas besoin d'order by car le résultat qu'on obtient n'est qu'une seule cellule (deux si on compte l'étiquette de la colonne).
+                    Pas besoin d'ORDER BY car le résultat qu'on obtient n'est qu'une seule cellule (deux si on compte l'étiquette de la colonne).
                 </p>
             </div>
             <div>
@@ -90,18 +90,114 @@
                 <p>
                     Vous pouvez trouver ici la cellule résultat de la reqête.<br>
                     Le résultat obtenu est de <strong>2 754 529,74 €</strong><br>
-                    En d'autres mots : à ce jour, les fournisseurs européens ont permis de générer plus de 2,7 millions d'euros.
+                    En d'autres mots : à ce jour, les fournisseurs européens ont permis de générer plus de 2,7 millions d'euros.<br>
+                    <br>
+                    Ce montant représente une part importante de l'activité commerciale de KDou. Il montre que les fournisseurs européens occupent une place majeure dans son activité et que l'entreprise ne dépend pas uniquement de fournisseurs internationaux pour générer son chiffre d'affaires.<br>
+                    <br>
+                    Cet indicateur permet également d'avoir une première vision de l'origine économique des produits vendus par KDou. Il pourra notamment être comparé au chiffre d'affaires généré avec les fournisseurs hors UE afin de mieux comprendre la place qu'occupent ces derniers dans l'activité de l'entreprise.
                 </p>
             </div>
         </section>
-        <section id="nolan-indic">
+        <section class="nolan-r2">
             <div>
-                <h2><strong>Proposition d'indicateur pertinent</strong> pour KDou : lorem ipsum</h2>
+                <h2>
+                    <strong>Proposition d'indicateur pertinent</strong> <a class="tab-bold">Chiffre d'affaire dégagé avec les fournisseurs hors UE.</strong><br>
+                    <a class="texte-secondaire">Réflexion sur l'origine des produits</a>
+                </h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, ex. Rem, expedita error. Architecto, corrupti dolorum quisquam odio iste, possimus earum quod praesentium eum, in ad saepe! Eligendi, totam itaque.
+                    Dans sa forme actuelle, KDou travaille avec des fournisseurs du monde entier pour leurs produits.<br>
+                    Seulement voilà, KDou veut garder voire coonsolider son image éco-friendly, et ça peut sembler un petit peu contradictoire lorsqu'on pense que les produits japonais ou singapouriens doivent être achminés jusqu'en France.<br>
+                    L'idée que j'ai eue c'est de quatifier à quel point le CA de KDou repose sur ces fournisseurs-là.<br>
+                    <br>
+                    <strong>Objectif</strong> <strong class="tab-bold">prendre conscience à KDou de la taille de la part non-eco-friendly de son CA.</strong><br>
+                    <br>
+                    <a class="texte-secondaire">J'apporterai d'autres justifications et idées <strong>plus bas</strong>.</a>                 
+                </p>
+            </div>
+            <div>
+                <h2>Étapes de la requête</h2>
+                <p>
+                    <a id="etape-1">Première étape : FROM</a><br>
+                    Comme pour la requête 2, je commence par sélection les tables qui contiennent des informations qui vont me servir.<br>
+                    J'ai besoin de <a id="etape-1">DetailCommande</a> pour les quatités et les remises dans mon calcul du CA, de <a id="etape-1">Produit</a> pour le coût d'achat, de <a id="etape-1">Categorie</a> pour le CoefMarge, et de <a id="etape-1">Fournisseur</a> et <a id="etape-1">Pays</a>.<br>
+                    Ma jointure est en INNER JOIN car j'ai besoin de l'intersection de ces tables.
+                </p>
+                <p>
+                    <a id="etape-2">Deuxième étape : WHERE</a><br>
+                    Je viens ici seulement prendre les fournisseurs des pays <a id="etape-2">non-membres de l'UE</a>.
+                </p>
+                <p>
+                    <a id="etape-3">Troisième étape : SELECT</a><br>
+                    Enfin j'affiche mon <a id="etape-3">CA par unité</a> que je multiplie ensuite par les quatités vendues par fournisseur pour obtenir le <a id="etape-3">CA par fournisseur</a>, puis j'ajoute toutes ces valeurs entre elles pour le <a id="etape-3">CA total hors-UE</a>.<br>
+                    Pour terminer, j'arrondis sinon il y a trop de chiffres non pertinents derrière la virgule.
+                <p>
+                    <a id="etape-4">Dernière étape : ORDER BY</a><br>
+                    Pas besoin d'ORDER BY car le résultat qu'on obtient n'est qu'une seule cellule (deux si on compte l'étiquette de la colonne).
+                </p>
+            </div>
+            <div>
+                <h2>Ce que ça donne en SQL</h2>
+                <pre>
+                    <code>
+    SELECT
+        ROUND(SUM(P.CoutAchat * 
+                    C.CoefMarge * 
+                    D.Quantité * 
+                    (1 - D.[Remise (%)]))
+            ,2) AS CATotalUE
+                    </code>
+
+                    <code>
+    FROM
+        (((DetailCommande AS D 
+                    INNER JOIN Produit AS P ON D.[Réf produit] = P.RefProd) 
+                    INNER JOIN Categorie AS C ON P.CodeCateg = C.CodeCateg)
+                    INNER JOIN Fournisseur AS F ON P.NoFour = F.NoFour)
+                    INNER JOIN Pays AS Y ON F.NoPays = Y.NoPays
+                    </code>
+                    <code>
+    WHERE
+        Y.UE = 'Hors';
+                    </code>
+                    <code>
+    <a>ORDER BY</a>
+                    </code>
+                </pre>
+            </div>
+            <div>
+                <h2>Résultats et interprétation</h2>
+                <img id="nolan-r2-indic" src="../assets/images/nolan/nolan-indic.png" alt="Résultat de la requêté 2 : 2 754 529,74 €">
+                <p>
+                    Vous pouvez trouver ici la cellule résultat de la reqête.<br>
+                    Le résultat obtenu est de <strong>2 208 860,08 €</strong><br>
+                    En d'autres mots : à ce jour, les fournisseurs non-européens ont permis de générer plus de 2,2 millions d'euros.<br>
+                    <br>
+                    Ça peut sembler superflu mais maintenant, on peut comparer ce CA avec celui des fournisseurs européens. KDou génerer plus d'argent avec ces derniers qu'avec les founisseurs internationaux. C'est quelque chose de très positif pour l'image éco-friendly de KDou car un peu plus de la moitié de son CA est local, dans une certaine mesure (à l'échelle européenne).<br>
+                    Cet indicateur n'est pas seulement là pour donner cette information liée au CA mais peut aussi servir à quantifier la proportion de dépendance à l'international et à la mondialosation, aux crises géopolitiques comme les guerres qui augmentent les coûts à tous niveaux, et encore plus lorsuque ces crises sont lointaines. Même si un peu plus de la moitié du CA est local, l'autre grosse moitié ne l'est pas, avec des produits venant parfois de Singapour ou du Japon<br>
+                    <br>
+                    Cet indicateur peut donc amener KDou à se poser des questions sur ses prochaines décisions liées à son développement :<br>
+                    Faut-il continuer à s'étendre grâce aux avantages des fournissuers internationaux comme leurs bas coûts ou alors favoriser des produits similaires ou identiques, plus proches, car ils sont plus respectueux de l'environnement et aussi souvent mieux réglementés sur le sol européen, même si ça implique un plus haut coût ?<br>
+                    <br>
+                    Cela n'est pas seulement une question que KDou pourrait se poser. Les clients peuvent eux aussi se poser des questions sur la pollution qu'ils engendrent et sur leur dépendance aux politiques internationales. Peut-être que certains, beaucoup, la majorité ou presque tous seraient prêts à payer plus pour éviter ces soucis ! Mais ça reste à vérifier.<br>
+                    <br>
+                    La question aujourd'hui, c'est : jusqu'où KDou et ses clients sont prêts à aller en terme d'écologie ?
                 </p>
             </div>
         </section>
         </main>
+        <footer>
+            <h1><strong>Rapport de SAÉ 1.04</strong><br>
+                Interrogation de la base de données.<br>
+                <a class="texte-secondaire">Il n'y a plus rien a voir ici...</a>
+            </h1>
+            <a class="bouton" href="#header-nolan">
+                Vers le haut de la page
+            </a>
+            <p>
+                Développé par Nolan, Alicia, Serena et Mahé<br>
+                <a class="texte-secondaire">GROUPE 110 ・ 2026-2027</a><br>
+                <a id="texte-logo-uni"><img id="logo-uni" src="assets/images/logo.png" alt="Logo de l'Université Paris Cité"> Université Paris Cité</a>                
+            </p>
+        </footer>
     </body>
 </html>
