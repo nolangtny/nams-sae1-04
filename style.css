@@ -660,7 +660,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     padding-right: 10px;
-    max-width: 90% !important;
+    max-width: 100%;
     align-items: stretch;
 }
 
@@ -673,7 +673,7 @@ main {
 #nolan-r2 div:nth-child(3) {
     background-color: #242626;
     overflow: scroll;
-    max-width: 90% !important;
+    max-width: 100% !important;
     border-radius: 15px;
     padding: 10px 20px;
     justify-self: center;
