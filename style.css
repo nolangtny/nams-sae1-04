@@ -721,7 +721,12 @@ main:has(.nolan-r2) {
         flex: none;
     }
 
-    .nolan-r2-resultat {
+    #nolan-r2-resultat {
+        height: 60px;
+        width: auto;
+    }
+
+    #nolan-r2-indic {
         height: 60px;
         width: auto;
     }
